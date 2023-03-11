@@ -2,6 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const { productRouter } = require('./routes/product');
+const { userRouter } = require('./routes/user');
 
 const app = express();
 
@@ -17,10 +19,11 @@ app.use(express.json());
 // app.set("view engine", "ejs")
 
 
-app.get("/",async(req,res)=>{
+app.get("/", async (req, res) => {
   res.json("Congratulations Plot Listing App Deployed successfully")
 })
-
+app.use("/auth", userRouter);
+app.use("/recipes", productRouter);
 // app.use(require('./router/api'));
 
 const port = process.env.PORT || 50000;
