@@ -1,4 +1,8 @@
+const mongoose = require("mongoose");
 const multer = require("multer");
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' })
+
 const {
     GridFsStorage
 } = require("multer-gridfs-storage");
@@ -27,7 +31,9 @@ const storage = new GridFsStorage({
     }
 });
 
-export const upload = multer({
+const upload = multer({
     storage
 });
+
+module.exports = upload
 

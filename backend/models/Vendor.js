@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const VendorSchema = new mongoose.Schema({
     name: { type: String, required: true, },
@@ -7,4 +7,4 @@ const VendorSchema = new mongoose.Schema({
     savedProduct: [{ type: mongoose.Schema.Types.ObjectId, ref: "Products" }],
 });
 
-export const VendorModel = mongoose.model("Vendors", VendorSchema);
+exports.VendorModel = mongoose.model("Vendors", VendorSchema);

@@ -1,11 +1,10 @@
-import express from "express";
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+const express = require("express");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+const userRouter = express.Router();
+const { VendorModel } = require("../models/Vendor.js");
 
-const router = express.Router();
-import { VendorModel } from "../models/Vendor.js";
-
-router.post("/register", async (req, res) => {
+userRouter.post("/register", async (req, res) => {
     const { name, username, password } = req.body;
     const user = await VendorModel.findOne({ username });
     if (user) {
@@ -17,7 +16,7 @@ router.post("/register", async (req, res) => {
     res.json({ message: "User registered successfully" });
 });
 
-router.post("/login", async (req, res) => {
+userRouter.post("/login", async (req, res) => {
     const { username, password } = req.body;
 
     const user = await VendorModel.findOne({ username });
@@ -37,10 +36,13 @@ router.post("/login", async (req, res) => {
     res.json({ token, userID: user._id });
 });
 
-export { router as userRouter };
+module.exports = userRouter;
 
-export const verifyToken = (req, res, next) => {
-    const authHeader = req.headers.authorization;
+
+const verifyToken = (req, res, next) => {
+    // const authHeader = req.headers.authorization;
+    const authHeader = req.headers.authorization.split(" ")[1];
+    console.log(authHeader)
     if (authHeader) {
         const decode = jwt.verify(authHeader, "secret")
         if (decode) {
@@ -54,3 +56,4 @@ export const verifyToken = (req, res, next) => {
         res.sendStatus(401);
     }
 };
+module.exports = verifyToken

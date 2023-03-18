@@ -2,8 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { productRouter } = require('./routes/product');
-const { userRouter } = require('./routes/user');
+const  productRouter  = require('./routes/product');
+const  userRouter   = require('./routes/user');
 
 const app = express();
 
@@ -24,7 +24,6 @@ app.get("/", async (req, res) => {
 })
 app.use("/auth", userRouter);
 app.use("/recipes", productRouter);
-// app.use(require('./router/api'));
 
 const port = process.env.PORT || 50000;
 

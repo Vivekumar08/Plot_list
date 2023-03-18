@@ -1,13 +1,13 @@
-import express from "express";
-import mongoose from "mongoose";
-import { ProductModel } from "../models/Product.js";
-import { VendorModel } from "../models/Vendor.js";
-import { upload } from "../utils/storage.js";
-import { verifyToken } from "./user.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const { ProductModel } = require("../models/Product.js");
+const { VendorModel } = require("../models/Vendor.js");
+const upload = require("../utils/storage.js");
+const verifyToken = require("./user.js");
 
-const router = express.Router();
+const productRouter = express.Router();
 
-router.get("/", async (req, res) => {
+productRouter.get("/", async (req, res) => {
     try {
         const result = await ProductModel.find({});
         res.status(200).json(result);
@@ -16,44 +16,48 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Create a new recipe
-router.post("/", upload.single('file'), verifyToken, async (req, res) => {
-
-    const { fullName, ingredients, Details, Reviews, Prize, userOwner, } = req.body
-    const { filename } = req.file
-    const recipe = new ProductModel({
-        _id: new mongoose.Types.ObjectId(),
-        fullName,
-        imageUrl: filename,
-        ingredients,
-        Details,
-        Reviews,
-        Prize,
-        userOwner,
-    });
-    console.log(recipe);
-
-    try {
-        const result = await recipe.save();
-        res.status(201).json({
-            createdRecipe: {
-                name: result.name,
-                image: result.image,
-                ingredients: result.ingredients,
-                Details: result.Details,
-                Prize: result.Prize,
-                Reviews: result.Reviews,
-                _id: result._id,
-            },
+// Create a new product
+productRouter.post("/",
+    verifyToken,
+    upload.single('file'),
+    async (req, res) => {
+        const { fullName, ingredients, Details, Reviews, Prize } = req.body
+        const { filename } = req.file
+        console.log(filename)
+        const user = await VendorModel.findById(req.user)
+        const recipe = new ProductModel({
+            _id: new mongoose.Types.ObjectId(),
+            fullName,
+            imageUrl: filename,
+            ingredients,
+            Details,
+            Reviews,
+            Prize,
+            userOwner: user,
         });
-    } catch (err) {
-        // console.log(err);
-        res.status(500).json(err);
-    }
-});
+        console.log(recipe);
+
+        try {
+            const result = await recipe.save();
+            res.status(201).json({
+                createdRecipe: {
+                    name: result.name,
+                    image: result.image,
+                    ingredients: result.ingredients,
+                    Details: result.Details,
+                    Prize: result.Prize,
+                    Reviews: result.Reviews,
+                    _id: result._id,
+                },
+            });
+        } catch (err) {
+            // console.log(err);
+            res.status(500).json(err);
+        }
+    });
 
 // Get a recipe by ID
-router.get("/:recipeId", async (req, res) => {
+productRouter.get("/:recipeId", async (req, res) => {
     try {
         const result = await ProductModel.findById(req.params.recipeId);
         res.status(200).json(result);
@@ -63,7 +67,7 @@ router.get("/:recipeId", async (req, res) => {
 });
 
 // Save a Recipe
-router.put("/", async (req, res) => {
+productRouter.put("/", async (req, res) => {
     const recipe = await ProductModel.findById(req.body.recipeID);
     const user = await VendorModel.findById(req.body.userID);
     try {
@@ -76,7 +80,7 @@ router.put("/", async (req, res) => {
 });
 
 // Get id of saved recipes
-router.get("/savedProduct/ids/:userId", async (req, res) => {
+productRouter.get("/savedProduct/ids/:userId", async (req, res) => {
     try {
         const user = await VendorModel.findById(req.params.userId);
         res.status(201).json({ savedProduct: user?.savedProduct });
@@ -87,7 +91,7 @@ router.get("/savedProduct/ids/:userId", async (req, res) => {
 });
 
 // Get saved recipes
-router.get("/savedProduct/:userId", async (req, res) => {
+productRouter.get("/savedProduct/:userId", async (req, res) => {
     try {
         const user = await VendorModel.findById(req.params.userId);
         const savedProduct = await ProductModel.find({
@@ -102,4 +106,4 @@ router.get("/savedProduct/:userId", async (req, res) => {
     }
 });
 
-export { router as productRouter };
+module.exports = productRouter;
