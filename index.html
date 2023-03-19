@@ -10,7 +10,9 @@
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <title>Plot Listing HTML5 Website Template</title>
 
     <!-- Bootstrap core CSS -->
@@ -21,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 <!--
 
 TemplateMo 564 Plot Listing
@@ -61,7 +64,9 @@ https://templatemo.com/tm-564-plot-listing
               <li><a href="category.html">Category</a></li>
               <li><a href="listing.html">Listing</a></li>
               <li><a href="contact.html">Contact Us</a></li> 
-              <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Listing</a></div></li> 
+              
+              <li><div class="main-white-button" onclick=openForm()><a> Login</a></div></li> 
+              <!-- <li><div class="main-white-button" onclick=openForm()><a> Sign Up</a></div></li>  -->
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -575,6 +580,64 @@ https://templatemo.com/tm-564-plot-listing
     </div>
   </div>
 
+  <!-- Login Form -->
+  <!-- A button to open the popup form -->
+
+<!-- The form -->
+
+<dialog class="form-popup" id="myForm" open>
+  <form action="/action_page.php" class="form-container">
+    <i class="far fa fa-times" style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;" onclick=closeBoth()></i>
+    <h1 class="form-heading">Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="checkbox" class="form-forgot-password" style="float:left; position: relative; margin-right: 5px;">
+    <h6 class="form-forgot-password" style=" margin-right: 10px; float: left;">Remember Me</h6>
+    <h6 class="form-forgot-password" style="color: #848893">Forgot Password?</h6>
+    <button type="button" class="btn cancel" onclick=closeForm() style="background-color: #2b2d42;">Login</button>
+    <div class="form-line1"></div>
+      <h5 class="form-or-text">or</h5>
+    <div class="form-line2"></div>
+    <div>
+      <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
+      <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i class="fab fa-facebook" style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
+    </div>
+    <h6 class="form-new-user" style=" margin-left: 15%; ">Don't have an account yet? <span style="color: #2b2d42; font-weight: 700; cursor: pointer;" onclick=openSignUpForm()>Create One.</span></h6>
+  </form>
+</dialog>
+
+
+<!-- Sign Up Form -->
+
+<dialog class="form-popup" id="SignUpForm" open>
+  <form action="/action_page.php" class="form-container">
+    <i class="far fa fa-times" style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;" onclick=closeBoth()></i>
+    <h1 class="form-heading">Sign Up</h1>
+    
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button type="button" class="btn cancel" onclick=closeForm() style="background-color: #2b2d42;">Sign Up</button>
+    <div class="form-line1"></div>
+      <h5 class="form-or-text">or</h5>
+    <div class="form-line2"></div>
+    <div>
+      <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
+      <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i class="fab fa-facebook" style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
+    </div>
+    <h6 class="form-new-user" style=" margin-left: 15%; ">Already have an account? <span style="color: #2b2d42; font-weight: 700;cursor: pointer;" onclick= closeSignUpOpenLogin()>Login.</span></h6>
+  </form>
+</dialog>
+
 
   <footer>
     <div class="container">
@@ -637,6 +700,33 @@ https://templatemo.com/tm-564-plot-listing
 
 
   <!-- Scripts -->
+  <script>
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function openSignUpForm() {
+  document.getElementById("SignUpForm").style.display = "block";
+}
+
+function closeSignUpForm() {
+  document.getElementById("SignUpForm").style.display = "none";
+}
+
+function closeSignUpOpenLogin(){
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("SignUpForm").style.display = "none";
+}
+
+function closeBoth(){
+  closeSignUpForm();
+  closeForm();
+}
+  </script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>

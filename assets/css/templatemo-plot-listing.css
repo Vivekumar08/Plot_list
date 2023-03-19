@@ -224,6 +224,7 @@ body {
 .main-white-button a:hover {
   background-color: #8d99af;
   color: #fff;
+  cursor: pointer;
 }
 
 /* 
@@ -243,15 +244,15 @@ header
 }
 
 .background-header .logo,
-.background-header .main-nav .nav li a {
+.background-header .main-nav .nav li button a {
   color: #1e1e1e!important;
 }
 
-.background-header .main-nav .nav li:hover a {
+.background-header .main-nav .nav li:hover button:hover a {
   color: #8d99af!important;
 }
 
-.background-header .nav li a.active {
+.background-header .nav li button a.active {
   color: #8d99af!important;
 }
 
