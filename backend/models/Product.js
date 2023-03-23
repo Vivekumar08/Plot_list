@@ -15,13 +15,13 @@ const productSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    Details: {
+    Distance: {
         type: Number,
         required: true,
     },
     Reviews: {
         type: Number,
-        required: true,
+        default:0,
     },
     Prize: {
         type: Number,

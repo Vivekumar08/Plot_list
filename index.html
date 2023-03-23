@@ -1,41 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <title>Plot Listing HTML5 Website Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <title>Plot Listing HTML5 Website Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/login.css">
-<!--
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/login.css">
 
 TemplateMo 564 Plot Listing
 
 https://templatemo.com/tm-564-plot-listing
 
 -->
-  </head>
+
+</head>
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -46,38 +43,32 @@ https://templatemo.com/tm-564-plot-listing
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
 
-  <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
             </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html" class="active">Home</a></li>
               <li><a href="category.html">Category</a></li>
               <li><a href="listing.html">Listing</a></li>
-              <li><a href="contact.html">Contact Us</a></li> 
-              
-              <li><div class="main-white-button" onclick=openForm()><a> Login</a></div></li> 
-              <!-- <li><div class="main-white-button" onclick=openForm()><a> Sign Up</a></div></li>  -->
-            </ul>        
+              <li><a href="contact.html">Contact Us</a></li>
+
+              <li>
+                <div class="main-white-button" onclick=openForm()><a> Login</a></div>
+              </li>
+            </ul>
             <a class='menu-trigger'>
-                <span>Menu</span>
+              <span>Menu</span>
             </a>
-            <!-- ***** Menu End ***** -->
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
 
   <div class="main-banner">
     <div class="container">
@@ -92,46 +83,54 @@ https://templatemo.com/tm-564-plot-listing
           <form id="search-form" name="gs" method="submit" role="search" action="#">
             <div class="row">
               <div class="col-lg-3 align-self-center">
-                  <fieldset>
-                      <select name="area" class="form-select" aria-label="Area" id="chooseCategory" onchange="this.form.click()">
-                          <option selected>All Areas</option>
-                          <option value="New Village">New Village</option>
-                          <option value="Old Town">Old Town</option>
-                          <option value="Modern City">Modern City</option>
-                      </select>
-                  </fieldset>
+                <fieldset>
+                  <select name="area" class="form-select" aria-label="Area" id="chooseCategory"
+                    onchange="this.form.click()">
+                    <option selected>All Areas</option>
+                    <option value="New Village">New Village</option>
+                    <option value="Old Town">Old Town</option>
+                    <option value="Modern City">Modern City</option>
+                  </select>
+                </fieldset>
               </div>
               <div class="col-lg-3 align-self-center">
-                  <fieldset>
-                      <input type="address" name="address" class="searchText" placeholder="Enter a location" autocomplete="on" required>
-                  </fieldset>
+                <fieldset>
+                  <input type="address" name="address" class="searchText" placeholder="Enter a location"
+                    autocomplete="on" required>
+                </fieldset>
               </div>
               <div class="col-lg-3 align-self-center">
-                  <fieldset>
-                      <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory" onchange="this.form.click()">
-                          <option selected>Price Range</option>
-                          <option value="$100 - $250">$100 - $250</option>
-                          <option value="$250 - $500">$250 - $500</option>
-                          <option value="$500 - $1000">$500 - $1,000</option>
-                          <option value="$1000+">$1,000 or more</option>
-                      </select>
-                  </fieldset>
+                <fieldset>
+                  <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory"
+                    onchange="this.form.click()">
+                    <option selected>Price Range</option>
+                    <option value="$100 - $250">$100 - $250</option>
+                    <option value="$250 - $500">$250 - $500</option>
+                    <option value="$500 - $1000">$500 - $1,000</option>
+                    <option value="$1000+">$1,000 or more</option>
+                  </select>
+                </fieldset>
               </div>
-              <div class="col-lg-3">                        
-                  <fieldset>
-                      <button class="main-button"><i class="fa fa-search"></i> Search Now</button>
-                  </fieldset>
+              <div class="col-lg-3">
+                <fieldset>
+                  <button class="main-button"><i class="fa fa-search"></i> Search Now</button>
+                </fieldset>
               </div>
             </div>
           </form>
         </div>
         <div class="col-lg-10 offset-lg-1">
           <ul class="categories">
-            <li><a href="category.html"><span class="icon"><img src="assets/images/search-icon-01.png" alt="Home"></span> Apartments</a></li>
-            <li><a href="listing.html"><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span> Food &amp; Life</a></li>
-            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-03.png" alt="Vehicle"></span> Cars</a></li>
-            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-04.png" alt="Shopping"></span> Shopping</a></li>
-            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-05.png" alt="Travel"></span> Traveling</a></li>
+            <li><a href="category.html"><span class="icon"><img src="assets/images/search-icon-01.png"
+                    alt="Home"></span> Apartments</a></li>
+            <li><a href="listing.html"><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span>
+                Food &amp; Life</a></li>
+            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-03.png" alt="Vehicle"></span>
+                Cars</a></li>
+            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-04.png" alt="Shopping"></span>
+                Shopping</a></li>
+            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-05.png" alt="Travel"></span>
+                Traveling</a></li>
           </ul>
         </div>
       </div>
@@ -161,31 +160,31 @@ https://templatemo.com/tm-564-plot-listing
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
                         Food &amp; Life
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
                         Cars
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
                         Shopping
                       </div>
                     </div>
                     <div class="last-thumb">
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-05.png" alt=""></span>
                         Traveling
                       </div>
                     </div>
                   </div>
-                </div> 
+                </div>
                 <div class="col-lg-9 align-self-center">
                   <ul class="nacc">
                     <li class="active">
@@ -195,8 +194,11 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
                                 <h4>One Of The Most Trending Stuffs Right Now!</h4>
-                                <p>Plot Listing is a responsive Bootstrap 5 website template that included 4 different HTML pages. This template is provided by TemplateMo website. You can apply this layout for your static or dynamic CMS websites.</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a></div>
+                                <p>Plot Listing is a responsive Bootstrap 5 website template that included 4 different
+                                  HTML pages. This template is provided by TemplateMo website. You can apply this layout
+                                  for your static or dynamic CMS websites.</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a>
+                                </div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -215,8 +217,10 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
                                 <h4>Food and Lifestyle category is here</h4>
-                                <p>You can feel free to download, edit and apply this template for your website. Please tell your friends about TemplateMo website.</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Explore More</a></div>
+                                <p>You can feel free to download, edit and apply this template for your website. Please
+                                  tell your friends about TemplateMo website.</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Explore More</a>
+                                </div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -235,8 +239,10 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
                                 <h4>Best car rentals for your trips!</h4>
-                                <p>Did you know? You can get the best free HTML templates on Too CSS blog. Visit the blog pages and explore fresh and latest website templates.</p>
-                                <div class="main-white-button"><a href="listing.html"><i class="fa fa-eye"></i> More Listing</a></div>
+                                <p>Did you know? You can get the best free HTML templates on Too CSS blog. Visit the
+                                  blog pages and explore fresh and latest website templates.</p>
+                                <div class="main-white-button"><a href="listing.html"><i class="fa fa-eye"></i> More
+                                    Listing</a></div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -255,8 +261,10 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
                                 <h4>Shopping List: Images from Unsplash</h4>
-                                <p>Image credits go to Unsplash website that provides free stock photos for anyone. Images used in this Plot Listing template are from Unsplash.</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a></div>
+                                <p>Image credits go to Unsplash website that provides free stock photos for anyone.
+                                  Images used in this Plot Listing template are from Unsplash.</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a>
+                                </div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -275,8 +283,11 @@ https://templatemo.com/tm-564-plot-listing
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
                                 <h4>Information and Safety Tips for Traveling</h4>
-                                <p>You are allowed to use this template for your commercial websites. You are NOT allowed to redistribute this template ZIP file on any Free CSS collection websites.</p>
-                                <div class="main-white-button"><a rel="nofollow" href="https://templatemo.com/contact"><i class="fa fa-eye"></i> Read More</a></div>
+                                <p>You are allowed to use this template for your commercial websites. You are NOT
+                                  allowed to redistribute this template ZIP file on any Free CSS collection websites.
+                                </p>
+                                <div class="main-white-button"><a rel="nofollow"
+                                    href="https://templatemo.com/contact"><i class="fa fa-eye"></i> Read More</a></div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -289,7 +300,7 @@ https://templatemo.com/tm-564-plot-listing
                       </div>
                     </li>
                   </ul>
-                </div>          
+                </div>
               </div>
             </div>
           </div>
@@ -318,7 +329,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>1. First Apartment Unit</h4></a>
+                      <a href="#">
+                        <h4>1. First Apartment Unit</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -328,7 +341,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(18) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950 / month
+                        with taxes
+                      </span>
                       <span class="details">Details: <em>2760 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
@@ -346,7 +362,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>2. Another House of Gaming</h4></a>
+                      <a href="#">
+                        <h4>2. Another House of Gaming</h4>
+                      </a>
                       <h6>by: Top Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -356,7 +374,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(24) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 /
+                        month with taxes
+                      </span>
                       <span class="details">Details: <em>3650 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
@@ -374,7 +395,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>3. Secret Place Hidden House</h4></a>
+                      <a href="#">
+                        <h4>3. Secret Place Hidden House</h4>
+                      </a>
                       <h6>by: Best Property</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -384,7 +407,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(36) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 /
+                        month with taxes
+                      </span>
                       <span class="details">Details: <em>5500 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
@@ -406,7 +432,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>4. Sunshine Fourth Apartment</h4></a>
+                      <a href="#">
+                        <h4>4. Sunshine Fourth Apartment</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -416,7 +444,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(24) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,600 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,600 / month with
+                        taxes
+                      </span>
                       <span class="details">Details: <em>3660 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
@@ -434,7 +465,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>5. Best House Of the Town</h4></a>
+                      <a href="#">
+                        <h4>5. Best House Of the Town</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -444,7 +477,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(32) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,600 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,600 / month with
+                        taxes
+                      </span>
                       <span class="details">Details: <em>1750 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
@@ -462,7 +498,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>6. Amazing Pool Party Villa</h4></a>
+                      <a href="#">
+                        <h4>6. Amazing Pool Party Villa</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -472,7 +510,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(40) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,850 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,850 / month with
+                        taxes
+                      </span>
                       <span class="details">Details: <em>3660 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
@@ -494,7 +535,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>7. Sunny Apartment</h4></a>
+                      <a href="#">
+                        <h4>7. Sunny Apartment</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -504,7 +547,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(24) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450 / month with
+                        taxes
+                      </span>
                       <span class="details">Details: <em>1640 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 8 Bedrooms</li>
@@ -522,7 +568,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>8. Third House of Gaming</h4></a>
+                      <a href="#">
+                        <h4>8. Third House of Gaming</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -532,7 +580,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(15) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520 / month with
+                        taxes
+                      </span>
                       <span class="details">Details: <em>1660 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
@@ -550,7 +601,9 @@ https://templatemo.com/tm-564-plot-listing
                       <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#"><h4>9. Relaxing BBQ Party Villa</h4></a>
+                      <a href="#">
+                        <h4>9. Relaxing BBQ Party Villa</h4>
+                      </a>
                       <h6>by: Sale Agent</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -560,7 +613,10 @@ https://templatemo.com/tm-564-plot-listing
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(20) Reviews</li>
                       </ul>
-                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760 / month with taxes</span>
+                      <span class="price">
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760 / month with
+                        taxes
+                      </span>
                       <span class="details">Details: <em>2880 sq ft</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
@@ -580,63 +636,75 @@ https://templatemo.com/tm-564-plot-listing
     </div>
   </div>
 
-  <!-- Login Form -->
-  <!-- A button to open the popup form -->
 
-<!-- The form -->
 
-<dialog class="form-popup" id="myForm" open>
-  <form action="/action_page.php" class="form-container">
-    <i class="far fa fa-times" style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;" onclick=closeBoth()></i>
-    <h1 class="form-heading">Login</h1>
+  <dialog class="form-popup" id="myForm" open>
+    <form class="form-container" id="login-form">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeBoth()></i>
+      <h1 class="form-heading">Login</h1>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="email"><b>Email</b></label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <input type="checkbox" class="form-forgot-password" style="float:left; position: relative; margin-right: 5px;">
-    <h6 class="form-forgot-password" style=" margin-right: 10px; float: left;">Remember Me</h6>
-    <h6 class="form-forgot-password" style="color: #848893">Forgot Password?</h6>
-    <button type="button" class="btn cancel" onclick=closeForm() style="background-color: #2b2d42;">Login</button>
-    <div class="form-line1"></div>
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"
+        name="password" required>
+
+      <input type="checkbox" class="form-forgot-password" style="float:left; position: relative; margin-right: 5px;">
+      <h6 class="form-forgot-password" style=" margin-right: 10px; float: left;">Remember Me</h6>
+      <h6 class="form-forgot-password" style="color: #848893">Forgot Password?</h6>
+      <button type="button" class="btn cancel" onclick=closeForm() style="background-color: #2b2d42;">Login</button>
+      <div class="form-line1"></div>
       <h5 class="form-or-text">or</h5>
-    <div class="form-line2"></div>
-    <div>
-      <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
-      <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i class="fab fa-facebook" style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
-    </div>
-    <h6 class="form-new-user" style=" margin-left: 15%; ">Don't have an account yet? <span style="color: #2b2d42; font-weight: 700; cursor: pointer;" onclick=openSignUpForm()>Create One.</span></h6>
-  </form>
-</dialog>
+      <div class="form-line2"></div>
+      <div>
+        <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i
+            class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
+        <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i
+            class="fab fa-facebook"
+            style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
+      </div>
+      <h6 class="form-new-user" style=" margin-left: 15%; ">Don't have an account yet? <span
+          style="color: #2b2d42; font-weight: 700; cursor: pointer;" onclick=openSignUpForm()>Create One.</span></h6>
+    </form>
+  </dialog>
 
 
-<!-- Sign Up Form -->
 
-<dialog class="form-popup" id="SignUpForm" open>
-  <form action="/action_page.php" class="form-container">
-    <i class="far fa fa-times" style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;" onclick=closeBoth()></i>
-    <h1 class="form-heading">Sign Up</h1>
-    
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" required>
+  <dialog class="form-popup" id="SignUpForm" open>
+    <form class="form-container" id="signup-form">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeBoth()></i>
+      <h1 class="form-heading">Sign Up</h1>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="name"><b>Name</b></label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <button type="button" class="btn cancel" onclick=closeForm() style="background-color: #2b2d42;">Sign Up</button>
-    <div class="form-line1"></div>
+      <label for="email"><b>Email</b></label>
+      <input type="email" class="form-control" id="email1" placeholder="Enter Email" name="email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" id="password1" placeholder="Enter Password" name="password" required>
+
+      <button type="submit" class="btn cancel" onclick=closeSignUpForm() style="background-color: #2b2d42;">Sign
+        Up</button>
+      <div class="form-line1"></div>
       <h5 class="form-or-text">or</h5>
-    <div class="form-line2"></div>
-    <div>
-      <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
-      <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i class="fab fa-facebook" style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
-    </div>
-    <h6 class="form-new-user" style=" margin-left: 15%; ">Already have an account? <span style="color: #2b2d42; font-weight: 700;cursor: pointer;" onclick= closeSignUpOpenLogin()>Login.</span></h6>
-  </form>
-</dialog>
+      <div class="form-line2"></div>
+      <div>
+        <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i
+            class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
+        <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i
+            class="fab fa-facebook"
+            style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
+      </div>
+      <h6 class="form-new-user" style=" margin-left: 15%; ">Already have an account? <span
+          style="color: #2b2d42; font-weight: 700;cursor: pointer;" onclick=closeSignUpOpenLogin()>Login.</span></h6>
+    </form>
+  </dialog>
 
 
   <footer>
@@ -647,7 +715,9 @@ https://templatemo.com/tm-564-plot-listing
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="Plot Listing">
             </div>
-            <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.</p>
+            <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing"
+                target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow"
+                href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -690,8 +760,9 @@ https://templatemo.com/tm-564-plot-listing
         <div class="col-lg-12">
           <div class="sub-footer">
             <p>Copyright © 2021 Plot Listing Co., Ltd. All Rights Reserved.
-            <br>
-			Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a></p>
+              <br>
+              Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a>
+            </p>
           </div>
         </div>
       </div>
@@ -699,33 +770,53 @@ https://templatemo.com/tm-564-plot-listing
   </footer>
 
 
-  <!-- Scripts -->
   <script>
+    const URLs = "http://localhost:5500";
+
     function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+      document.getElementById("myForm").style.display = "block";
+    }
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
+    function closeForm() {
+      // login()
+      document.getElementById("myForm").style.display = "none";
+    }
 
-function openSignUpForm() {
-  document.getElementById("SignUpForm").style.display = "block";
-}
+    function openSignUpForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("SignUpForm").style.display = "block";
+    }
 
-function closeSignUpForm() {
-  document.getElementById("SignUpForm").style.display = "none";
-}
+    function closeSignUpForm() {
+      // const dialog = document.getElementsByClassName("form-popup")
+      // const signUpForm = dialog.querySelector("#signup-form");
+      // const newNameInput = signUpForm.querySelector("#name");
+      // const newEmailInput = signUpForm.querySelector("#email1");
+      // const newPasswordInput = signUpForm.querySelector("#password1");
 
-function closeSignUpOpenLogin(){
-  document.getElementById("myForm").style.display = "block";
-  document.getElementById("SignUpForm").style.display = "none";
-}
+      // signUpForm.addEventListener("submit", async (event) => {
+      //   event.preventDefault();
+      //   console.log(newNameInput, newEmailInput, newPasswordInput)
+      //   //   const formData = new FormData(form);
+      //   const response = await fetch(`${URLs}/auth/register`, {
+      //     method: "POST",
+      //     body: { name: newNameInput, email: newEmailInput, password: newPasswordInput }
+      //   });
+      //   const data = await response.json();
+      //   console.log(data);
+      // });
+      document.getElementById("SignUpForm").style.display = "none";
+    }
 
-function closeBoth(){
-  closeSignUpForm();
-  closeForm();
-}
+    function closeSignUpOpenLogin() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("SignUpForm").style.display = "none";
+    }
+
+    function closeBoth() {
+      closeSignUpForm();
+      closeForm();
+    }
   </script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

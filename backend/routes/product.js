@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const { ProductModel } = require("../models/Product.js");
 const { VendorModel } = require("../models/Vendor.js");
 const upload = require("../utils/storage.js");
-const verifyToken = require("./user.js");
+const verifyToken = require("../utils/verifyToken.js");
 
 const productRouter = express.Router();
 
@@ -21,7 +21,7 @@ productRouter.post("/",
     verifyToken,
     upload.single('file'),
     async (req, res) => {
-        const { fullName, ingredients, Details, Reviews, Prize } = req.body
+        const { fullName, ingredients, Distance, Reviews, Prize } = req.body
         const { filename } = req.file
         console.log(filename)
         const user = await VendorModel.findById(req.user)
@@ -30,7 +30,7 @@ productRouter.post("/",
             fullName,
             imageUrl: filename,
             ingredients,
-            Details,
+            Distance,
             Reviews,
             Prize,
             userOwner: user,
@@ -44,7 +44,7 @@ productRouter.post("/",
                     name: result.name,
                     image: result.image,
                     ingredients: result.ingredients,
-                    Details: result.Details,
+                    Distance: result.Distance,
                     Prize: result.Prize,
                     Reviews: result.Reviews,
                     _id: result._id,
