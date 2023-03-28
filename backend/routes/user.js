@@ -5,20 +5,25 @@ const userRouter = express.Router();
 const { VendorModel } = require("../models/Vendor.js");
 
 userRouter.post("/register", async (req, res) => {
-    const { name, email, password } = req.body;
-    const user = await VendorModel.findOne({ username });
-    if (user) {
-        return res.status(400).json({ message: "Username already exists" });
+    try {
+        const { name, email, password } = req.body;
+        console.log(name, email, password)
+        const user = await VendorModel.findOne({ email });
+        if (user) {
+            return res.status(400).json({ message: "Username already exists" });
+        }
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new VendorModel({ name, email, password: hashedPassword });
+        await newUser.save();
+        res.json({ message: "User registered successfully" });
+    } catch (err) {
+        console.log(err)
     }
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new VendorModel({ name, email, password: hashedPassword });
-    await newUser.save();
-    res.json({ message: "User registered successfully" });
 });
 
 userRouter.post("/login", async (req, res) => {
     const { email, password } = req.body;
-
+    console.log(email, password)
     const user = await VendorModel.findOne({ email });
 
     if (!user) {

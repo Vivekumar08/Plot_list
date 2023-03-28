@@ -23,6 +23,56 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/login.css">
 
+  <script>
+    // window.addEventListener("load", () => {
+    //   async function sendData() {
+    //     document.getElementById("SignUpForm").style.display = "none";
+    //     const name = await document.getElementById("name").value;
+    //     const email = await document.getElementById("email1").value;
+    //     const password = await document.getElementById("password1").value;
+    //     // const XHR = new XMLHttpRequest();
+
+    //     // // Bind the FormData object and the form element
+    //     // const FD = new FormData(form);
+    //     console.log(name, email, password)
+    //     // // Define what happens on successful data submission
+    //     // XHR.addEventListener("load", (event) => {
+    //     //   alert(event.target.responseText);
+    //     // });
+
+    //     // // Define what happens in case of error
+    //     // XHR.addEventListener("error", (event) => {
+    //     //   alert('Oops! Something went wrong.');
+    //     // });
+
+    //     // // Set up our request
+    //     // XHR.open("POST", "https://example.com/cors.php");
+
+    //     // // The data sent is what the user provided in the form
+    //     // XHR.send(FD);
+    //     const response = await fetch(`http://localhost:6600/auth/register`, {
+    //       method: "POST",
+    //       body: JSON.stringify({ name, email, password }),
+    //       headers: {
+    //         "Content-type": "application/json; charset=UTF-8"
+    //       }
+    //     });
+    //     const data = await response.json();
+    //     console.log(data)
+    //   }
+
+    //   // Get the form element
+    //   const form = document.getElementById("signup-form");
+
+    //   // Add 'submit' event handler
+    //   form.addEventListener("submit", (event) => {
+    //     event.preventDefault();
+
+    //     sendData();
+    //   });
+    // });
+
+  </script>
 
 </head>
 
@@ -96,7 +146,8 @@
               </div>
               <div class="col-lg-3 align-self-center">
                 <fieldset>
-                  <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory"
+                  <!-- <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory" -->
+                  <select name="price" class="form-select" aria-label="Default select example" id="choosePrice"
                     onchange="this.form.click()">
                     <option selected>Price Range</option>
                     <option value="$100 - $250">$100 - $250</option>
@@ -650,7 +701,8 @@
       <input type="checkbox" class="form-forgot-password" style="float:left; position: relative; margin-right: 5px;">
       <h6 class="form-forgot-password" style=" margin-right: 10px; float: left;">Remember Me</h6>
       <h6 class="form-forgot-password" style="color: #848893">Forgot Password?</h6>
-      <button type="button" class="btn cancel" onclick=closeForm() style="background-color: #2b2d42;">Login</button>
+      <input type="submit" class="btn cancel" name="submit" onclick="closeForm()" style="background-color: #2b2d42;"
+        value="Login">
       <div class="form-line1"></div>
       <h5 class="form-or-text">or</h5>
       <div class="form-line2"></div>
@@ -669,14 +721,14 @@
 
 
   <dialog class="form-popup" id="SignUpForm" open>
-    <form class="form-container" id="signup-form">
+    <form class="form-container" name="RegForm" id="signup-form">
       <i class="far fa fa-times"
         style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
         onclick=closeBoth()></i>
       <h1 class="form-heading">Sign Up</h1>
 
       <label for="name"><b>Name</b></label>
-      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="Name" required>
 
       <label for="email"><b>Email</b></label>
       <input type="email" class="form-control" id="email1" placeholder="Enter Email" name="email" required>
@@ -684,8 +736,8 @@
       <label for="password"><b>Password</b></label>
       <input type="password" class="form-control" id="password1" placeholder="Enter Password" name="password" required>
 
-      <button type="submit" class="btn cancel" onclick=closeSignUpForm() style="background-color: #2b2d42;">Sign
-        Up</button>
+      <input type="submit" class="btn cancel" name="submit" style="background-color: #2b2d42;"
+        onclick="closeSignUpForm()" value="Sign Up">
       <div class="form-line1"></div>
       <h5 class="form-or-text">or</h5>
       <div class="form-line2"></div>
@@ -766,15 +818,39 @@
 
 
   <script>
-    const URLs = "http://localhost:5500";
 
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
 
-    function closeForm() {
-      // login()
-      document.getElementById("myForm").style.display = "none";
+    async function closeForm() {
+      try {
+        document.getElementById("myForm").style.display = "none";
+        const form = document.getElementById("login-form");
+        async function sendData() {
+          const email = await document.getElementById("email").value;
+          const password = await document.getElementById("password").value;
+          console.log(email, password)
+          const response = await fetch(`http://localhost:6600/auth/login`, {
+            method: "POST",
+            body: JSON.stringify({ email, password }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8"
+            }
+          });
+          const data = await response.json();
+          alert('You have login successfully');
+          console.log(data)
+        }
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          sendData();
+        });
+      } catch (error) {
+        console.log(error)
+      }
     }
 
     function openSignUpForm() {
@@ -782,25 +858,36 @@
       document.getElementById("SignUpForm").style.display = "block";
     }
 
-    function closeSignUpForm() {
-      // const dialog = document.getElementsByClassName("form-popup")
-      // const signUpForm = dialog.querySelector("#signup-form");
-      // const newNameInput = signUpForm.querySelector("#name");
-      // const newEmailInput = signUpForm.querySelector("#email1");
-      // const newPasswordInput = signUpForm.querySelector("#password1");
+    async function closeSignUpForm() {
+      // event.preventDefault();
+      try {
+        document.getElementById("SignUpForm").style.display = "none";
+        const form = document.getElementById("signup-form");
+        async function sendData() {
+          const name = await document.getElementById("name").value;
+          const email = await document.getElementById("email1").value;
+          const password = await document.getElementById("password1").value;
+          console.log(name, email, password)
+          const response = await fetch(`http://localhost:6600/auth/register`, {
+            method: "POST",
+            body: JSON.stringify({ name, email, password }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8"
+            }
+          });
+          const data = await response.json();
+          alert('You have registered successfully');
+          console.log(data)
+        }
 
-      // signUpForm.addEventListener("submit", async (event) => {
-      //   event.preventDefault();
-      //   console.log(newNameInput, newEmailInput, newPasswordInput)
-      //   //   const formData = new FormData(form);
-      //   const response = await fetch(`${URLs}/auth/register`, {
-      //     method: "POST",
-      //     body: { name: newNameInput, email: newEmailInput, password: newPasswordInput }
-      //   });
-      //   const data = await response.json();
-      //   console.log(data);
-      // });
-      document.getElementById("SignUpForm").style.display = "none";
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          sendData();
+        });
+      } catch (error) {
+        console.log(error)
+      }
     }
 
     function closeSignUpOpenLogin() {
