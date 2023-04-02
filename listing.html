@@ -763,7 +763,7 @@
     </div>
   </div>
   <dialog class="form-popup" id="listingForm" open>
-    <form class="form-container" id="listingForm">
+    <form class="form-container" id="listingForm1">
       <i class="far fa fa-times"
         style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
         onclick=closeListingForm()></i>
@@ -771,10 +771,12 @@
 
       <label for="name"><b>Full Name<span style="color: red;">&nbsp;*</span></b></label>
       <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name" required>
-
-      <label for="text"><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
-      <input type="text" class="form-control" id="amenities" name="password" placeholder="Enter the Amenities"
-        name="password" required multiple>
+      
+        <label for="text"><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
+        <div id="amenityBox"></div>
+        <input type="text" class="form-control" id="amenities" name="password" placeholder="Enter the Amenities"
+          name="password" required multiple>
+      
       
         <label for="image"><b>Image<span style="color: red;">&nbsp;*</span></b></label>
         <input type="file" class="form-control" id="image" name="image" placeholder="Upload Image"
@@ -787,10 +789,7 @@
         <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
         <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
             name="price" required>   
-        
-            <button id="submitListing" class="btn cancel" name="submit" style="background-color: #2b2d42;" onclick="document.getElementById('listingForm1')">Add Listing</button>
-      <!-- <button type="button" id="submitListing" class="btn cancel" name="submit" onclick="closeListingForm(event)" style="background-color: #2b2d42;"
-        value="Add Listing" onCli> -->
+        <input type="button" class="btn cancel" name="submitListing" onclick="closeListingForm()" style="background-color: #2b2d42;" value="Add Listing"/>
     </form>
   </dialog>
 
@@ -866,9 +865,9 @@
     function openListingForm() {
       document.getElementById("listingForm").style.display = "block";
     }
-    const form = document.getElementById("listingForm");
-    function closeListingForm() {
-      form.su
+    const form = document.getElementById("listingForm1");
+    function closeListingForm(event) {
+      form.submit();
       document.getElementById("listingForm").style.display = "none";
       }
       
@@ -881,10 +880,19 @@
     })
     const inputField = document.getElementById("amenities");
 
+    document.addEventListener("click", function(e){
+  const target = e.target.closest("#amenityCross"); // Or any other selector.
+
+  if(target){
+    document.getElementById("amenityCross").parentNode.remove();
+  }
+});
+
 inputField.addEventListener("keyup", () => {
     if (event.keyCode === 13) {
         event.preventDefault();
         const inputValues = inputField.value.split(",");
+        document.getElementById("amenityBox").innerHTML += "<div class= amenityBoxes>" + inputValues + "<span id=amenityCross class=amenityCross> X </span>"+ "</div>";
         console.log(inputValues);
         inputField.value = "";
     }
