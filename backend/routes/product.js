@@ -4,8 +4,35 @@ const { ProductModel } = require("../models/Product.js");
 const { VendorModel } = require("../models/Vendor.js");
 const upload = require("../utils/storage.js");
 const verifyToken = require("../utils/verifyToken.js");
+const deleteFile = require("../utils/fileDelete.js");
 
 const productRouter = express.Router();
+
+
+let bucket;
+mongoose.connection.on("connected", () => {
+    var db = mongoose.connections[0].db;
+    bucket = new mongoose.mongo.GridFSBucket(db, {
+        bucketName: "newBucket"
+    });
+});
+
+productRouter.get("/fileinfo/:filename", (req, res) => {
+    const file = bucket
+        .find({
+            filename: req.params.filename
+        })
+        .toArray((err, files) => {
+            if (!files || files.length === 0) {
+                return res.status(404)
+                    .json({
+                        err: "no files exist"
+                    });
+            }
+            bucket.openDownloadStreamByName(req.params.filename)
+                .pipe(res);
+        });
+});
 
 productRouter.get("/", async (req, res) => {
     try {
@@ -65,6 +92,22 @@ productRouter.get("/:recipeId", async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+productRouter.delete("/:id", verifyToken, async (req, res) => {
+    const prodId = req.params.id;
+    const user = await VendorModel.findById(req.body.userID);
+    try {
+        if (user) {
+            const recipe = await ProductModel.findById(prodId);
+            deleteFile(recipe.imageUrl)
+            recipe.deleteOne({ _id: prodId })
+        } else {
+            res.status(400).json("Owner not found")
+        }
+    } catch (error) {
+        res.status(500).json({ err: "Internal Server Error" })
+    }
+})
 
 // Save a Recipe
 productRouter.put("/", async (req, res) => {

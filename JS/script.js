@@ -108,10 +108,10 @@ function closeListingForm() {
     try {
         document.getElementById("listingForm").style.display = "none";
         const form = document.getElementById("listingForm1");
-        // const cookies = document.cookie.split(";");
-        // const myCookie = cookies.find(cookie => cookie.trim().startsWith("token="));
-        // const myCookieValue = myCookie ? myCookie.trim().substring("token=".length) : null;
-        // const authToken = myCookieValue
+        const cookies = document.cookie.split(";");
+        const myCookie = cookies.find(cookie => cookie.trim().startsWith("token="));
+        const myCookieValue = myCookie ? myCookie.trim().substring("token=".length) : null;
+        const authToken = myCookieValue
         async function sendData() {
             const fullName = await document.getElementById("placeName").value;
             const Bathroom = await document.getElementById("Bathrooms").value;
@@ -119,29 +119,35 @@ function closeListingForm() {
             const file1 = document.getElementById("image");
             const dimension = await document.getElementById("dimensions").value;
             const Prize = await document.getElementById("price").value;
-            console.log(fullName, Bedroom, file1.files[0], Bathroom, dimension, Prize)
-            const file = file.files[0]
+            let formData = new FormData();
+            formData.append('fullName', fullName);
+            formData.append('Bathroom', Bathroom);
+            formData.append('Bedroom', Bedroom);
+            formData.append('file', file1.files[0]);
+            formData.append('dimension', dimension);
+            formData.append('Prize', Prize);
+            // const file = file1.files[0]
             const response = await fetch(`http://localhost:6600/product/products`, {
                 method: "POST",
-                body: JSON.stringify({ fullName, Bedroom, file, Bathroom, dimension, Prize }),
+                body: formData,
                 headers: {
-                    "Content-type": "multipart/form-data",
                     "authorization": `${authToken}`
                 }
             });
             if (response.status == 201) {
-                const data = await response.json();
-                alert('You have registered successfully');
-                console.log(data)
+                await response.json();
+                alert('The Product registered successfully');
             }
         }
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             // console.log(authToken)
-            // sendData();
+            sendData();
         });
     } catch (error) {
-        console.log(error)
+        alert(error);
+
+        // console.log(error)
     }
 }
 
