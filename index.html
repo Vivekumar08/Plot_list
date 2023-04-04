@@ -50,9 +50,11 @@
               <li><a href="category.html">Category</a></li>
               <li><a href="listing.html">Listing</a></li>
               <li><a href="contact.html">Contact Us</a></li>
-
               <li>
-                <div class="main-white-button" onclick=openForm()><a> Login</a></div>
+                <div class="main-white-button" id="loginFormOpen" onclick=openForm()><a> Login</a></div>
+                <div onclick=openListingForm() style="display: none;" id="listform" class="main-white-button"><a
+                    href="#"><i class="fa fa-plus"></i> Add Your
+                    Listing</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -702,6 +704,38 @@
     </form>
   </dialog>
 
+  <dialog class="form-popup" id="listingForm" open>
+    <form class="form-container" id="listingForm1">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeListing()></i>
+      <h1 class="form-heading">Add your Listing</h1>
+
+      <label for="name"><b>Full Place Name<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="text" class="form-control" id="placeName" placeholder="Enter Full Name" name="name" required>
+
+      <label><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
+      <div id="amenityBox">
+        <label for="Bathrooms"><b>Bathrooms<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" id="Bathrooms" name="Bathrooms" min="1" max="5" value="1">
+        <label for="Bedrooms"><b>Bedrooms<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" id="Bedrooms" name="Bedrooms" min="1" max="5" value="1">
+      </div>
+
+      <label for="image"><b>Image<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="file" class="form-control" id="image" name="image" placeholder="Upload Image" name="image" required>
+
+      <label for="dimensions"><b>Dimensions</b></label>
+      <input type="text" class="form-control" id="dimensions" name="dimensions"
+        placeholder="Enter Dimensions of the place" name="dimensions">
+
+      <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
+        name="price" required>
+      <input type="submit" class="btn cancel" name="submit" onclick="closeListingForm()"
+        style="background-color: #2b2d42;" value="Add Listing" />
+    </form>
+  </dialog>
 
   <footer>
     <div class="container">
@@ -766,89 +800,7 @@
   </footer>
 
 
-  <script>
-
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    async function closeForm() {
-      try {
-        document.getElementById("myForm").style.display = "none";
-        const form = document.getElementById("login-form");
-        async function sendData() {
-          const email = await document.getElementById("email").value;
-          const password = await document.getElementById("password").value;
-          console.log(email, password)
-          const response = await fetch(`http://localhost:6600/auth/login`, {
-            method: "POST",
-            body: JSON.stringify({ email, password }),
-            headers: {
-              "Content-type": "application/json; charset=UTF-8"
-            }
-          });
-          const data = await response.json();
-          alert('You have login successfully');
-          console.log(data)
-        }
-
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-
-          sendData();
-        });
-      } catch (error) {
-        console.log(error)
-      }
-    }
-
-    function openSignUpForm() {
-      document.getElementById("myForm").style.display = "none";
-      document.getElementById("SignUpForm").style.display = "block";
-    }
-
-    async function closeSignUpForm() {
-      // event.preventDefault();
-      try {
-        document.getElementById("SignUpForm").style.display = "none";
-        const form = document.getElementById("signup-form");
-        async function sendData() {
-          const name = await document.getElementById("name").value;
-          const email = await document.getElementById("email1").value;
-          const password = await document.getElementById("password1").value;
-          console.log(name, email, password)
-          const response = await fetch(`http://localhost:6600/auth/register`, {
-            method: "POST",
-            body: JSON.stringify({ name, email, password }),
-            headers: {
-              "Content-type": "application/json; charset=UTF-8"
-            }
-          });
-          const data = await response.json();
-          alert('You have registered successfully');
-          console.log(data)
-        }
-
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-
-          sendData();
-        });
-      } catch (error) {
-        console.log(error)
-      }
-    }
-
-    function closeSignUpOpenLogin() {
-      document.getElementById("myForm").style.display = "block";
-      document.getElementById("SignUpForm").style.display = "none";
-    }
-
-    function closeBoth() {
-      closeSignUpForm();
-      closeForm();
-    }
-  </script>
+  <script src="./JS/script.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>

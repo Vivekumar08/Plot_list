@@ -7,21 +7,27 @@ const productSchema = mongoose.Schema({
     },
     ingredients: [
         {
-            type: String,
-            required: true,
+            Bathroom: {
+                type: Number,
+                required: true,
+            },
+            Bedroom: {
+                type: Number,
+                required: true,
+            },
         },
     ],
     imageUrl: {
         type: String,
         required: true,
     },
-    Distance: {
+    dimension: {
         type: Number,
         required: true,
     },
     Reviews: {
         type: Number,
-        default:0,
+        default: 0,
     },
     Prize: {
         type: Number,

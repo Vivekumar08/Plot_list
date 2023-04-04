@@ -1,38 +1,174 @@
-const URLs = "http://localhost:5500";
-function Login() {
-    const form = document.querySelector("#login-form");
-    const emailInput = form.querySelector("#email");
-    const passwordInput = form.querySelector("#password");
+document.addEventListener('DOMContentLoaded', function () {
+    const button1 = document.getElementById("loginFormOpen");
+    const button2 = document.getElementById("listform");
+    const cookies = document.cookie.split(";");
+    const myCookie = cookies.find(cookie => cookie.trim().startsWith("token="));
+    const myCookieValue = myCookie ? myCookie.trim().substring("token=".length) : null;
+    const authToken = myCookieValue
+    if (authToken) {
+        button1.style.display = "none";
+        button2.style.display = "block";
+    }
+});
 
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        console.log(emailInput, passwordInput)
-        // const formData = new FormData(form);
-        const response = await fetch(`${URLs}auth/login`, {
-            method: "POST",
-            body: { email: emailInput, password: passwordInput }
-            ,
-        });
-        const data = await response.json();
-        console.log(data);
-    });
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
 }
 
-function signup() {
-    const signUpForm = document.querySelector("#signup-form");
-    const newNameInput = signUpForm.querySelector("#name");
-    const newEmailInput = signUpForm.querySelector("#email1");
-    const newPasswordInput = signUpForm.querySelector("#password1");
+async function closeForm() {
+    try {
+        const button1 = document.getElementById("loginFormOpen");
+        const button2 = document.getElementById("listform");
+        document.getElementById("myForm").style.display = "none";
+        const form = document.getElementById("login-form");
+        async function sendData() {
+            const email = await document.getElementById("email").value;
+            const password = await document.getElementById("password").value;
+            const response = await fetch(`http://localhost:6600/auth/login`, {
+                method: "POST",
+                body: JSON.stringify({ email, password }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            });
+            const data = await response.json();
+            alert('You have login successfully');
+            document.cookie = `token=${data.token}`;
+            const authToken = document.cookie
+            console.log(authToken)
+            if (authToken) {
+                button1.style.display = "none";
+                button2.style.display = "block";
+            }
+        }
 
-    signUpForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        console.log(newNameInput, newEmailInput, newPasswordInput)
-        //   const formData = new FormData(form);
-        const response = await fetch(`${URLs}/auth/register`, {
-            method: "POST",
-            body: { name: newNameInput, email: newEmailInput, password: newPasswordInput }
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            sendData();
         });
-        const data = await response.json();
-        console.log(data);
-    });
+    } catch (error) {
+        console.log(error)
+    }
 }
+
+function openSignUpForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("SignUpForm").style.display = "block";
+}
+
+async function closeSignUpForm() {
+    // event.preventDefault();
+    try {
+        document.getElementById("SignUpForm").style.display = "none";
+        const form = document.getElementById("signup-form");
+        async function sendData() {
+            const name = await document.getElementById("name").value;
+            const email = await document.getElementById("email1").value;
+            const password = await document.getElementById("password1").value;
+            console.log(name, email, password)
+            const response = await fetch(`http://localhost:6600/auth/register`, {
+                method: "POST",
+                body: JSON.stringify({ name, email, password }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            });
+            const data = await response.json();
+            alert('You have registered successfully');
+            console.log(data)
+        }
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            sendData();
+        });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+function closeSignUpOpenLogin() {
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("SignUpForm").style.display = "none";
+}
+
+function closeBoth() {
+    closeSignUpForm();
+    closeForm();
+}
+
+// Listing Form Functionalitis
+function openListingForm() {
+    document.getElementById("listingForm").style.display = "block";
+}
+function closeListing() {
+    document.getElementById("listingForm").style.display = "none";
+}
+
+function closeListingForm() {
+    try {
+        document.getElementById("listingForm").style.display = "none";
+        const form = document.getElementById("listingForm1");
+        // const cookies = document.cookie.split(";");
+        // const myCookie = cookies.find(cookie => cookie.trim().startsWith("token="));
+        // const myCookieValue = myCookie ? myCookie.trim().substring("token=".length) : null;
+        // const authToken = myCookieValue
+        async function sendData() {
+            const fullName = await document.getElementById("placeName").value;
+            const Bathroom = await document.getElementById("Bathrooms").value;
+            const Bedroom = await document.getElementById("Bedrooms").value;
+            const file1 = document.getElementById("image");
+            const dimension = await document.getElementById("dimensions").value;
+            const Prize = await document.getElementById("price").value;
+            console.log(fullName, Bedroom, file1.files[0], Bathroom, dimension, Prize)
+            const file = file.files[0]
+            const response = await fetch(`http://localhost:6600/product/products`, {
+                method: "POST",
+                body: JSON.stringify({ fullName, Bedroom, file, Bathroom, dimension, Prize }),
+                headers: {
+                    "Content-type": "multipart/form-data",
+                    "authorization": `${authToken}`
+                }
+            });
+            if (response.status == 201) {
+                const data = await response.json();
+                alert('You have registered successfully');
+                console.log(data)
+            }
+        }
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            // console.log(authToken)
+            // sendData();
+        });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+// form.addEventListener("keyup", (event) => {
+//     if (event.keyCode === 13) {
+//         event.preventDefault();
+//         return false;
+//     }
+// })
+// const inputField = document.getElementById("amenities");
+
+// document.addEventListener("click", function (e) {
+//     const target = e.target.closest("#amenityCross"); // Or any other selector.
+
+//     if (target) {
+//         document.getElementById("amenityCross").parentNode.remove();
+//     }
+// });
+
+// inputField.addEventListener("keyup", (event) => {
+//     if (event.keyCode === 13) {
+//         event.preventDefault();
+//         const inputValues = inputField.value.split(",");
+//         document.getElementById("amenityBox").innerHTML += "<div class= amenityBoxes>" + inputValues + "<span id=amenityCross class=amenityCross> X </span>" + "</div>";
+//         console.log(inputValues);
+//         inputField.value = "";
+//     }
+
+// });

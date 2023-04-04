@@ -17,11 +17,11 @@ productRouter.get("/", async (req, res) => {
 });
 
 // Create a new product
-productRouter.post("/",
+productRouter.post("/products",
     verifyToken,
     upload.single('file'),
     async (req, res) => {
-        const { fullName, ingredients, Distance, Reviews, Prize } = req.body
+        const { fullName, Bedroom, Bathroom, dimension, Prize } = req.body
         const { filename } = req.file
         console.log(filename)
         const user = await VendorModel.findById(req.user)
@@ -29,9 +29,10 @@ productRouter.post("/",
             _id: new mongoose.Types.ObjectId(),
             fullName,
             imageUrl: filename,
-            ingredients,
-            Distance,
-            Reviews,
+            ingredients: {
+                Bedroom, Bathroom,
+            },
+            dimension: dimension,
             Prize,
             userOwner: user,
         });
@@ -42,7 +43,7 @@ productRouter.post("/",
             res.status(201).json({
                 createdRecipe: {
                     name: result.name,
-                    image: result.image,
+                    image: result.imageUrl,
                     ingredients: result.ingredients,
                     Distance: result.Distance,
                     Prize: result.Prize,
@@ -51,7 +52,6 @@ productRouter.post("/",
                 },
             });
         } catch (err) {
-            // console.log(err);
             res.status(500).json(err);
         }
     });

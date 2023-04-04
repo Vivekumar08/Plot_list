@@ -1,30 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <title>Plot Listing Page</title>
+  <title>Plot Listing Page</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/listingForm.css">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/listingForm.css">
 
-  </head>
+</head>
 
 <body>
 
@@ -56,11 +56,16 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="category.html">Category</a></li>
               <li><a href="listing.html" class="active">Listing</a></li>
-              <li><a href="contact.html">Contact Us</a></li> 
-              <li onclick=openListingForm()><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Listing</a></div></li> 
-            </ul>        
+              <li><a href="contact.html">Contact Us</a></li>
+              <li>
+                <div class="main-white-button" id="loginFormOpen" onclick=openForm()><a> Login</a></div>
+                <div onclick=openListingForm() style="display: none;" id="listform" class="main-white-button"><a
+                    href="#"><i class="fa fa-plus"></i> Add Your
+                    Listing</a></div>
+              </li>
+            </ul>
             <a class='menu-trigger'>
-                <span>Menu</span>
+              <span>Menu</span>
             </a>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -99,28 +104,28 @@
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
                         Food &amp; Life
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
                         Cars
                       </div>
                     </div>
                     <div class="last-thumb">
-                      <div class="thumb">                 
+                      <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
                         Traveling
                       </div>
                     </div>
                   </div>
-                </div> 
+                </div>
                 <div class="col-lg-9">
                   <ul class="nacc">
-                  <!-- first category listing of items -->
+                    <!-- first category listing of items -->
                     <li class="active">
                       <div>
                         <div class="col-lg-12">
@@ -138,11 +143,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Sunshine Paradise Apartment</h4></a>
+                                      <a href="#">
+                                        <h4>Sunshine Paradise Apartment</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $600 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -157,11 +169,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Best one in this category</h4></a>
+                                      <a href="#">
+                                        <h4>Best one in this category</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $800 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $800 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -176,11 +195,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Amazing Dj Party House</h4></a>
+                                      <a href="#">
+                                        <h4>Amazing Dj Party House</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $950 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $950 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -199,11 +225,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Sunshine Villa Condo</h4></a>
+                                      <a href="#">
+                                        <h4>Sunshine Villa Condo</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $450 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -218,11 +251,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Gaming Studio Units</h4></a>
+                                      <a href="#">
+                                        <h4>Gaming Studio Units</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $550 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $550 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -237,17 +277,24 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Amazing Dj Party House</h4></a>
+                                      <a href="#">
+                                        <h4>Amazing Dj Party House</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $650 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $650 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            
+
                             <!-- third page of first category -->
                             <div class="item">
                               <div class="row">
@@ -262,11 +309,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Third Page Apartment</h4></a>
+                                      <a href="#">
+                                        <h4>Third Page Apartment</h4>
+                                      </a>
                                       <h6>by: Real Estate Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 to $950 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $600 to $950 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -281,11 +335,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>New Gaming Townhouse</h4></a>
+                                      <a href="#">
+                                        <h4>New Gaming Townhouse</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $840 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $840 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -300,11 +361,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Amazing Party Villa</h4></a>
+                                      <a href="#">
+                                        <h4>Amazing Party Villa</h4>
+                                      </a>
                                       <h6>by: Real ESTATE Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $950 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $950 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -314,7 +382,7 @@
                         </div>
                       </div>
                     </li>
-                    
+
                     <!-- second category listing of items -->
                     <li>
                       <div>
@@ -333,11 +401,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Food First page</h4></a>
+                                      <a href="#">
+                                        <h4>Food First page</h4>
+                                      </a>
                                       <h6>by: Food Delivery</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $600 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -352,11 +427,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Food Item 2</h4></a>
+                                      <a href="#">
+                                        <h4>Food Item 2</h4>
+                                      </a>
                                       <h6>by: Food Delivery</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $540 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $540 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -371,17 +453,24 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Food Item 3</h4></a>
+                                      <a href="#">
+                                        <h4>Food Item 3</h4>
+                                      </a>
                                       <h6>by: Food Delivery</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $720 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $720 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            
+
                             <!-- second category second page -->
                             <div class="item">
                               <div class="row">
@@ -396,11 +485,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>FOOD Second Page</h4></a>
+                                      <a href="#">
+                                        <h4>FOOD Second Page</h4>
+                                      </a>
                                       <h6>by: Food Delivery</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $420 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $420 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -415,11 +511,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Best Food Item 5</h4></a>
+                                      <a href="#">
+                                        <h4>Best Food Item 5</h4>
+                                      </a>
                                       <h6>by: Food Delivery</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $450 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -434,11 +537,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Amazing Food Item 6</h4></a>
+                                      <a href="#">
+                                        <h4>Amazing Food Item 6</h4>
+                                      </a>
                                       <h6>by: Food Delivery</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $500 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $500 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -450,7 +560,7 @@
                         </div>
                       </div>
                     </li>
-                    
+
                     <!-- third category first page -->
                     <li>
                       <div>
@@ -469,11 +579,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Third Category First Page</h4></a>
+                                      <a href="#">
+                                        <h4>Third Category First Page</h4>
+                                      </a>
                                       <h6>by: Sale Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $750 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $750 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -488,11 +605,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Car Item 2</h4></a>
+                                      <a href="#">
+                                        <h4>Car Item 2</h4>
+                                      </a>
                                       <h6>by: Sale Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $880 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $880 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -507,17 +631,24 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Car Item 3</h4></a>
+                                      <a href="#">
+                                        <h4>Car Item 3</h4>
+                                      </a>
                                       <h6>by: Sale Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $770 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $770 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            
+
                             <!-- third category second page -->
                             <div class="item">
                               <div class="row">
@@ -532,11 +663,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Third Category Second Page</h4></a>
+                                      <a href="#">
+                                        <h4>Third Category Second Page</h4>
+                                      </a>
                                       <h6>by: Sale Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $660 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $660 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -551,11 +689,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Car Item 5</h4></a>
+                                      <a href="#">
+                                        <h4>Car Item 5</h4>
+                                      </a>
                                       <h6>by: Sale Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $550 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $550 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -570,26 +715,33 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Car Item 6</h4></a>
+                                      <a href="#">
+                                        <h4>Car Item 6</h4>
+                                      </a>
                                       <h6>by: Sale Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $440 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $440 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            
+
                             <!-- third category third page -->
                             <!-- NONE -->
-                            
-                            
+
+
                           </div>
                         </div>
                       </div>
                     </li>
-                    
+
                     <!-- 4th category 1st page -->
                     <li>
                       <div>
@@ -608,11 +760,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Traveling Item 1</h4></a>
+                                      <a href="#">
+                                        <h4>Traveling Item 1</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $400 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $400 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -627,11 +786,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Traveling Item 2</h4></a>
+                                      <a href="#">
+                                        <h4>Traveling Item 2</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $500 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $500 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -646,17 +812,24 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Traveling Item 3</h4></a>
+                                      <a href="#">
+                                        <h4>Traveling Item 3</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $342 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $342 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            
+
                             <!-- 4th category 2nd page -->
                             <div class="item">
                               <div class="row">
@@ -671,11 +844,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>4th Category 2nd Page</h4></a>
+                                      <a href="#">
+                                        <h4>4th Category 2nd Page</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $268 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $268 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -690,11 +870,18 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Traveling Item 5</h4></a>
+                                      <a href="#">
+                                        <h4>Traveling Item 5</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $145 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $145 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
@@ -709,17 +896,24 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>Traveling Item 6</h4></a>
+                                      <a href="#">
+                                        <h4>Traveling Item 6</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $240 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $240 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            
+
                             <!-- 4th category 3rd page -->
                             <div class="item">
                               <div class="row">
@@ -734,27 +928,34 @@
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
-                                      <a href="#"><h4>4th Category 3rd Page</h4></a>
+                                      <a href="#">
+                                        <h4>4th Category 3rd Page</h4>
+                                      </a>
                                       <h6>by: Travel Agent</h6>
-                                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $360 / month included tax</span>
+                                      <span class="price">
+                                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                        $360 / month included tax
+                                      </span>
                                       <span class="details">Details: <em>860 sq ft</em></span>
-                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
+                                      <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
+                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Bathrooms</span>
                                     </div>
                                   </div>
                                 </div>
-                                
-                                
+
+
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </li>
-                  
-                    
+
+
                   </ul>
-                  
-                </div>          
+
+                </div>
               </div>
             </div>
           </div>
@@ -762,37 +963,108 @@
       </div>
     </div>
   </div>
+
+  <dialog class="form-popup" id="myForm" open>
+    <form class="form-container" id="login-form">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeBoth()></i>
+      <h1 class="form-heading">Login</h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"
+        name="password" required>
+
+      <input type="checkbox" class="form-forgot-password" style="float:left; position: relative; margin-right: 5px;">
+      <h6 class="form-forgot-password" style=" margin-right: 10px; float: left;">Remember Me</h6>
+      <h6 class="form-forgot-password" style="color: #848893">Forgot Password?</h6>
+      <input type="submit" class="btn cancel" name="submit" onclick="closeForm()" style="background-color: #2b2d42;"
+        value="Login">
+      <div class="form-line1"></div>
+      <h5 class="form-or-text">or</h5>
+      <div class="form-line2"></div>
+      <div>
+        <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i
+            class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
+        <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i
+            class="fab fa-facebook"
+            style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
+      </div>
+      <h6 class="form-new-user" style=" margin-left: 15%; ">Don't have an account yet? <span
+          style="color: #2b2d42; font-weight: 700; cursor: pointer;" onclick=openSignUpForm()>Create One.</span></h6>
+    </form>
+  </dialog>
+
+
+
+  <dialog class="form-popup" id="SignUpForm" open>
+    <form class="form-container" style="width: 350px;" name="RegForm" id="signup-form">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeBoth()></i>
+      <h1 class="form-heading">Sign Up</h1>
+
+      <label for="name"><b>Name</b></label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="Name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" class="form-control" id="email1" placeholder="Enter Email" name="email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" id="password1" placeholder="Enter Password" name="password" required>
+
+      <input type="submit" class="btn cancel" name="submit" style="background-color: #2b2d42;"
+        onclick="closeSignUpForm()" value="Sign Up">
+      <div class="form-line1"></div>
+      <h5 class="form-or-text">or</h5>
+      <div class="form-line2"></div>
+      <div>
+        <button type="submit" class="btn btn2" style="background-color: #c9453a; float: left;"><i
+            class="fab fa-google icons" style="position: relative; margin-right: 10px;"></i>Google</button>
+        <button type="submit" class="btn btn2" style="background-color:#3b5998; float: right;"><i
+            class="fab fa-facebook"
+            style="position: relative; margin-right: 10px; font-size: 18px;"></i>Facebook</button>
+      </div>
+      <h6 class="form-new-user" style=" margin-left: 15%; ">Already have an account? <span
+          style="color: #2b2d42; font-weight: 700;cursor: pointer;" onclick=closeSignUpOpenLogin()>Login.</span></h6>
+    </form>
+  </dialog>
+
   <dialog class="form-popup" id="listingForm" open>
     <form class="form-container" id="listingForm1">
       <i class="far fa fa-times"
         style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
-        onclick=closeListingForm()></i>
-      <h1 class="form-heading">Add  your Listing</h1>
+        onclick=closeListing()></i>
+      <h1 class="form-heading">Add your Listing</h1>
 
-      <label for="name"><b>Full Name<span style="color: red;">&nbsp;*</span></b></label>
-      <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name" required>
-      
-        <label for="text"><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
-        <div id="amenityBox"></div>
-        <input type="text" class="form-control" id="amenities" name="password" placeholder="Enter the Amenities"
-          name="password" required multiple>
-      
-      
-        <label for="image"><b>Image<span style="color: red;">&nbsp;*</span></b></label>
-        <input type="file" class="form-control" id="image" name="image" placeholder="Upload Image"
-          name="image" required>
-        
-        <label for="dimensions"><b>Dimensions</b></label>
-        <input type="text" class="form-control" id="dimensions" name="dimensions" placeholder="Enter Dimensions of the place"
-          name="dimensions">  
+      <label for="name"><b>Full Place Name<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="text" class="form-control" id="placeName" placeholder="Enter Full Name" name="name" required>
 
-        <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
-        <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
-            name="price" required>   
-        <input type="button" class="btn cancel" name="submitListing" onclick="closeListingForm()" style="background-color: #2b2d42;" value="Add Listing"/>
+      <label><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
+      <div id="amenityBox">
+        <label for="Bathrooms"><b>Bathrooms<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" id="Bathrooms" name="Bathrooms" min="1" max="5" value="1">
+        <label for="Bedrooms"><b>Bedrooms<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" id="Bedrooms" name="Bedrooms" min="1" max="5" value="1">
+      </div>
+
+      <label for="image"><b>Image<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="file" class="form-control" id="image" name="image" placeholder="Upload Image" name="image" required>
+
+      <label for="dimensions"><b>Dimensions</b></label>
+      <input type="text" class="form-control" id="dimensions" name="dimensions"
+        placeholder="Enter Dimensions of the place" name="dimensions">
+
+      <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
+        name="price" required>
+      <input type="submit" class="btn cancel" name="submit" onclick="closeListingForm()"
+        style="background-color: #2b2d42;" value="Add Listing" />
     </form>
   </dialog>
-
   <footer>
     <div class="container">
       <div class="row">
@@ -801,7 +1073,8 @@
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="">
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adicingi elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adicingi elit, sed do eiusmod tempor incididunt ut et dolore
+              magna aliqua.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -844,15 +1117,16 @@
         <div class="col-lg-12">
           <div class="sub-footer">
             <p>Copyright © 2021 Plot Listing Co., Ltd. All Rights Reserved.
-            <br>
-			Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a></p>
+              <br>
+              Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  
+
 
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -861,44 +1135,8 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script>
-    function openListingForm() {
-      document.getElementById("listingForm").style.display = "block";
-    }
-    const form = document.getElementById("listingForm1");
-    function closeListingForm(event) {
-      form.submit();
-      document.getElementById("listingForm").style.display = "none";
-      }
-      
-    
-    form.addEventListener("keyup",()=>{
-      if(event.keyCode === 13){
-        event.preventDefault();
-        return false;
-      }
-    })
-    const inputField = document.getElementById("amenities");
+  <script src="./JS/script.js"></script>
 
-    document.addEventListener("click", function(e){
-  const target = e.target.closest("#amenityCross"); // Or any other selector.
-
-  if(target){
-    document.getElementById("amenityCross").parentNode.remove();
-  }
-});
-
-inputField.addEventListener("keyup", () => {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        const inputValues = inputField.value.split(",");
-        document.getElementById("amenityBox").innerHTML += "<div class= amenityBoxes>" + inputValues + "<span id=amenityCross class=amenityCross> X </span>"+ "</div>";
-        console.log(inputValues);
-        inputField.value = "";
-    }
-
-});
-  </script>
 </body>
 
 </html>

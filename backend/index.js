@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
   res.json("Congratulations Plot Listing App Deployed successfully")
 })
 app.use("/auth", userRouter);
-app.use("/recipes", productRouter);
+app.use("/product", productRouter);
 
 const port = process.env.PORT || 50000;
 

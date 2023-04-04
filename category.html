@@ -1,35 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <title>Plotlist - Listing HTML5 Template</title>
+  <title>Plotlist - Listing HTML5 Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-<!--
-
-TemplateMo 564 Plot Listing
-
-https://templatemo.com/tm-564-plot-listing
-
--->
-  </head>
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+</head>
 
 <body>
 
@@ -61,11 +54,16 @@ https://templatemo.com/tm-564-plot-listing
               <li><a href="index.html">Home</a></li>
               <li><a href="category.html" class="active">Category</a></li>
               <li><a href="listing.html">Listing</a></li>
-              <li><a href="contact.html">Contact Us</a></li> 
-              <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Listing</a></div></li> 
-            </ul>        
+              <li><a href="contact.html">Contact Us</a></li>
+              <li>
+                <div class="main-white-button" id="loginFormOpen" onclick=openForm()><a> Login</a></div>
+                <div onclick=openListingForm() style="display: none;" id="listform" class="main-white-button"><a
+                    href="#"><i class="fa fa-plus"></i> Add Your
+                    Listing</a></div>
+              </li>
+            </ul>
             <a class='menu-trigger'>
-                <span>Menu</span>
+              <span>Menu</span>
             </a>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -101,31 +99,41 @@ https://templatemo.com/tm-564-plot-listing
                   <div class="menu">
                     <div class="first-thumb active">
                       <div class="thumb">
-                        <span class="icon"><img src="assets/images/search-icon-01.png" alt=""><h4>Apartments</h4></span>    
+                        <span class="icon"><img src="assets/images/search-icon-01.png" alt="">
+                          <h4>Apartments</h4>
+                        </span>
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-02.png" alt=""><h4>Food &amp; Life</h4></span>
+                      <div class="thumb">
+                        <span class="icon"><img src="assets/images/search-icon-02.png" alt="">
+                          <h4>Food &amp; Life</h4>
+                        </span>
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-03.png" alt=""><h4>Cars</h4></span>
+                      <div class="thumb">
+                        <span class="icon"><img src="assets/images/search-icon-03.png" alt="">
+                          <h4>Cars</h4>
+                        </span>
                       </div>
                     </div>
                     <div>
-                      <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-04.png" alt=""><h4>Shopping</h4></span>
+                      <div class="thumb">
+                        <span class="icon"><img src="assets/images/search-icon-04.png" alt="">
+                          <h4>Shopping</h4>
+                        </span>
                       </div>
                     </div>
                     <div class="last-thumb">
-                      <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-05.png" alt=""><h4>Traveling</h4></span>
+                      <div class="thumb">
+                        <span class="icon"><img src="assets/images/search-icon-05.png" alt="">
+                          <h4>Traveling</h4>
+                        </span>
                       </div>
                     </div>
                   </div>
-                </div> 
+                </div>
                 <div class="col-lg-12">
                   <ul class="nacc">
                     <li class="active">
@@ -137,7 +145,9 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-01.png" alt=""><h4>Apartments</h4></span> 
+                                      <span class="icon"><img src="assets/images/search-icon-01.png" alt="">
+                                        <h4>Apartments</h4>
+                                      </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -146,20 +156,25 @@ https://templatemo.com/tm-564-plot-listing
                                     </div>
                                   </div>
                                 </div>
-                              </div>      
+                              </div>
                             </div>
                             <div class="col-lg-12">
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
                                     <h4>Description for Apartments</h4>
-                                    <p>If you feel that Plot Listing HTML template is useful, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. You are allowed to use this template for your commercial websites. You are NOT allowed to redistribute this template ZIP file on any Free CSS collection websites. You may contact us for more information. Thank you.</p>
+                                    <p>If you feel that Plot Listing HTML template is useful, please <a rel="nofollow"
+                                        href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little
+                                      via PayPal. You are allowed to use this template for your commercial websites. You
+                                      are NOT allowed to redistribute this template ZIP file on any Free CSS collection
+                                      websites. You may contact us for more information. Thank you.</p>
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
                                       <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
                                     </div>
-                                    <span class="list-item">This Week: 200 Listings &amp; 150 Sales<br>This Month: 1,800 Listings &amp; 1,560 Sales<br>This Year: 16,000 Listings &amp; 14,000 Sales</span>
+                                    <span class="list-item">This Week: 200 Listings &amp; 150 Sales<br>This Month: 1,800
+                                      Listings &amp; 1,560 Sales<br>This Year: 16,000 Listings &amp; 14,000 Sales</span>
                                   </div>
                                 </div>
                               </div>
@@ -169,10 +184,15 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <h4>General Info. about Apartments</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-                                    <span class="list-item">* Listing should have all the proper documents before being checked in.
-                                    <br>** Listing will be checked by our team members.
-                                    <br>*** After being sold, it should imediately be removed from our site and properly monitored.</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque.</p>
+                                    <span class="list-item">* Listing should have all the proper documents before being
+                                      checked in.
+                                      <br>** Listing will be checked by our team members.
+                                      <br>*** After being sold, it should imediately be removed from our site and
+                                      properly monitored.</span>
                                   </div>
                                 </div>
                               </div>
@@ -180,7 +200,7 @@ https://templatemo.com/tm-564-plot-listing
                           </div>
                         </div>
                       </div>
-                    </li>                 
+                    </li>
                     <li>
                       <div>
                         <div class="thumb">
@@ -190,7 +210,9 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-02.png" alt=""><h4>Food &amp; Life</h4></span> 
+                                      <span class="icon"><img src="assets/images/search-icon-02.png" alt="">
+                                        <h4>Food &amp; Life</h4>
+                                      </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -199,23 +221,28 @@ https://templatemo.com/tm-564-plot-listing
                                     </div>
                                   </div>
                                 </div>
-                              </div>      
+                              </div>
                             </div>
                             <div class="col-lg-12">
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
                                     <h4>Description for Food and Life</h4>
-                                    <p>Plot Listing template is a responsive website layout that included four HTML pages. Please tell your friends about TemplateMo website. You can download and apply this template for your dynamic CMS websites.</p>
+                                    <p>Plot Listing template is a responsive website layout that included four HTML
+                                      pages. Please tell your friends about TemplateMo website. You can download and
+                                      apply this template for your dynamic CMS websites.</p>
                                     <br>
                                     <p><strong>Did you know?</strong>
-                                    <br>You can get the best free HTML templates on Too CSS blog. Visit the blog pages and explore fresh and latest website templates.</p>
+                                      <br>You can get the best free HTML templates on Too CSS blog. Visit the blog pages
+                                      and explore fresh and latest website templates.
+                                    </p>
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
                                       <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
                                     </div>
-                                    <span class="list-item">This Week: 124 Listings &amp; 84 Sales<br>This Month: 1,040 Listings &amp; 720 Sales<br>This Year: 10,640 Listings &amp; 9,600 Sales</span>
+                                    <span class="list-item">This Week: 124 Listings &amp; 84 Sales<br>This Month: 1,040
+                                      Listings &amp; 720 Sales<br>This Year: 10,640 Listings &amp; 9,600 Sales</span>
                                   </div>
                                 </div>
                               </div>
@@ -225,10 +252,15 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <h4>General Info</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-                                    <span class="list-item">* Listing should have all the proper documents before being checked in.
-                                    <br>** Listing will be checked by our team members.
-                                    <br>*** After being sold, it should imediately be removed from our site and properly monitored.</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque.</p>
+                                    <span class="list-item">* Listing should have all the proper documents before being
+                                      checked in.
+                                      <br>** Listing will be checked by our team members.
+                                      <br>*** After being sold, it should imediately be removed from our site and
+                                      properly monitored.</span>
                                   </div>
                                 </div>
                               </div>
@@ -246,7 +278,9 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-03.png" alt=""><h4>Cars</h4></span> 
+                                      <span class="icon"><img src="assets/images/search-icon-03.png" alt="">
+                                        <h4>Cars</h4>
+                                      </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -255,20 +289,24 @@ https://templatemo.com/tm-564-plot-listing
                                     </div>
                                   </div>
                                 </div>
-                              </div>      
+                              </div>
                             </div>
                             <div class="col-lg-12">
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
                                     <h4>Description about cars</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
                                       <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
                                     </div>
-                                    <span class="list-item">This Week: 800 Listings &amp; 400 Sales<br>This Month: 1,600 Listings &amp; 1,200 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
+                                    <span class="list-item">This Week: 800 Listings &amp; 400 Sales<br>This Month: 1,600
+                                      Listings &amp; 1,200 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
                                   </div>
                                 </div>
                               </div>
@@ -278,10 +316,15 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <h4>General Info. about cars</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-                                    <span class="list-item">* Listing should have all the proper documents before being checked in.
-                                    <br>** Listing will be checked by our team members.
-                                    <br>*** After being sold, it should imediately be removed from our site and properly monitored.</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque.</p>
+                                    <span class="list-item">* Listing should have all the proper documents before being
+                                      checked in.
+                                      <br>** Listing will be checked by our team members.
+                                      <br>*** After being sold, it should imediately be removed from our site and
+                                      properly monitored.</span>
                                   </div>
                                 </div>
                               </div>
@@ -299,7 +342,9 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-04.png" alt=""><h4>Shopping</h4></span> 
+                                      <span class="icon"><img src="assets/images/search-icon-04.png" alt="">
+                                        <h4>Shopping</h4>
+                                      </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -308,20 +353,24 @@ https://templatemo.com/tm-564-plot-listing
                                     </div>
                                   </div>
                                 </div>
-                              </div>      
+                              </div>
                             </div>
                             <div class="col-lg-12">
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
                                     <h4>Description about Shopping</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
                                       <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
                                     </div>
-                                    <span class="list-item">This Week: 150 Listings &amp; 140 Sales<br>This Month: 1,500 Listings &amp; 1,100 Sales<br>This Year: 15,000 Listings &amp; 14,000 Sales</span>
+                                    <span class="list-item">This Week: 150 Listings &amp; 140 Sales<br>This Month: 1,500
+                                      Listings &amp; 1,100 Sales<br>This Year: 15,000 Listings &amp; 14,000 Sales</span>
                                   </div>
                                 </div>
                               </div>
@@ -331,10 +380,15 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <h4>General Info. for Shopping</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-                                    <span class="list-item">* Listing should have all the proper documents before being checked in.
-                                    <br>** Listing will be checked by our team members.
-                                    <br>*** After being sold, it should imediately be removed from our site and properly monitored.</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque.</p>
+                                    <span class="list-item">* Listing should have all the proper documents before being
+                                      checked in.
+                                      <br>** Listing will be checked by our team members.
+                                      <br>*** After being sold, it should imediately be removed from our site and
+                                      properly monitored.</span>
                                   </div>
                                 </div>
                               </div>
@@ -352,7 +406,9 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-05.png" alt=""><h4>Traveling</h4></span> 
+                                      <span class="icon"><img src="assets/images/search-icon-05.png" alt="">
+                                        <h4>Traveling</h4>
+                                      </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -361,20 +417,24 @@ https://templatemo.com/tm-564-plot-listing
                                     </div>
                                   </div>
                                 </div>
-                              </div>      
+                              </div>
                             </div>
                             <div class="col-lg-12">
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
                                     <h4>Description of Traveling</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
                                       <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
                                     </div>
-                                    <span class="list-item">This Week: 200 Listings &amp; 120 Sales<br>This Month: 1,400 Listings &amp; 900 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
+                                    <span class="list-item">This Week: 200 Listings &amp; 120 Sales<br>This Month: 1,400
+                                      Listings &amp; 900 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
                                   </div>
                                 </div>
                               </div>
@@ -384,10 +444,15 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="row">
                                   <div class="col-lg-12">
                                     <h4>General Info. about Traveling</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
-                                    <span class="list-item">* Listing should have all the proper documents before being checked in.
-                                    <br>** Listing will be checked by our team members.
-                                    <br>*** After being sold, it should imediately be removed from our site and properly monitored.</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque.</p>
+                                    <span class="list-item">* Listing should have all the proper documents before being
+                                      checked in.
+                                      <br>** Listing will be checked by our team members.
+                                      <br>*** After being sold, it should imediately be removed from our site and
+                                      properly monitored.</span>
                                   </div>
                                 </div>
                               </div>
@@ -397,7 +462,7 @@ https://templatemo.com/tm-564-plot-listing
                       </div>
                     </li>
                   </ul>
-                </div>          
+                </div>
               </div>
             </div>
           </div>
@@ -405,7 +470,38 @@ https://templatemo.com/tm-564-plot-listing
       </div>
     </div>
   </div>
+  <dialog class="form-popup" id="listingForm" open>
+    <form class="form-container" id="listingForm1">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeListing()></i>
+      <h1 class="form-heading">Add your Listing</h1>
 
+      <label for="name"><b>Full Place Name<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="text" class="form-control" id="placeName" placeholder="Enter Full Name" name="name" required>
+
+      <label><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
+      <div id="amenityBox">
+        <label for="Bathrooms"><b>Bathrooms<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" id="Bathrooms" name="Bathrooms" min="1" max="5" value="1">
+        <label for="Bedrooms"><b>Bedrooms<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" id="Bedrooms" name="Bedrooms" min="1" max="5" value="1">
+      </div>
+
+      <label for="image"><b>Image<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="file" class="form-control" id="image" name="image" placeholder="Upload Image" name="image" required>
+
+      <label for="dimensions"><b>Dimensions</b></label>
+      <input type="text" class="form-control" id="dimensions" name="dimensions"
+        placeholder="Enter Dimensions of the place" name="dimensions">
+
+      <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
+        name="price" required>
+      <input type="submit" class="btn cancel" name="submit" onclick="closeListingForm()"
+        style="background-color: #2b2d42;" value="Add Listing" />
+    </form>
+  </dialog>
   <footer>
     <div class="container">
       <div class="row">
@@ -414,7 +510,8 @@ https://templatemo.com/tm-564-plot-listing
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="">
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adicingi elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adicingi elit, sed do eiusmod tempor incididunt ut et dolore
+              magna aliqua.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -457,8 +554,9 @@ https://templatemo.com/tm-564-plot-listing
         <div class="col-lg-12">
           <div class="sub-footer">
             <p>Copyright © 2021 Plot Listing Co., Ltd. All Rights Reserved.
-            <br>
-			Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a></p>
+              <br>
+              Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a>
+            </p>
           </div>
         </div>
       </div>
@@ -473,7 +571,7 @@ https://templatemo.com/tm-564-plot-listing
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-
+  <script src="./JS/script.js"></script>
 </body>
 
 </html>
