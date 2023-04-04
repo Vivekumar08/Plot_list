@@ -1,0 +1,155 @@
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 140px;
+  }
+  
+  /* The popup form - hidden by default */
+  
+  .form-popup {
+      display: none;
+      position: absolute;
+      left: 6%;
+      right: 50px;
+      bottom: 50px;
+      top: 20%;
+      z-index: 9;
+      border: none;
+      backdrop-filter: blur(100px); 
+      transition: display 2s;
+   }
+  #myForm::backdrop {
+      background-color: darkorange;
+    }
+  
+  /* Add styles to the form container */
+  .form-container {
+      max-width: 400px;
+      padding: 10px;
+      background-color: white;
+  }
+  
+  .form-heading{
+    position: relative;
+    margin-top: -9px;
+     margin-bottom: 20px;
+     font-family: Montserrat, sans-serif;
+     font-weight: 0;
+     font-style: bold;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text],.form-container input[type=email], .form-container input[type=password],.form-container input[type=file]:focus,.form-container input[type=number]:focus {
+    width: 100%;
+    height: 45px;
+    padding: 15px;
+    margin: 5px 0 30px 0;
+    border: 0.5px solid #848893;
+    border-radius: 10px;
+    background: white;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus,.form-container input[type=email]:focus, .form-container input[type=password]:focus,.form-container input[type=file]:focus,.form-container input[type=number]:focus {
+    background-color: white;
+    outline: none;
+  }
+  
+  .form-container ::placeholder{
+    font-size: 13px;
+  }
+  .required label:after {
+    content:" *";
+    color: red;
+  }     
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #8d99af;
+    color: white;
+    padding: 12px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .form-container .btn2{
+    display: inline-block;
+    width: 48%;
+  }
+  
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  .form-line1{
+      float: left;
+      width: 40%;
+      text-align: center;
+      border-bottom: 0.1px solid #979faf;
+      line-height: 0.1em;
+      margin: 13px -92px -10px; 
+      margin-left: 1%;
+  }
+  .form-line2{
+    float: right;
+    width: 40%;
+    text-align: center;
+    border-bottom: 0.5px solid #979faf;
+    line-height: 0.1em;
+    margin: -20px 0 20px;
+    margin-left: 5%;
+  }
+  .form-or-text{
+    position: relative;
+    margin-left: 48%;
+    margin-right: 50%;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  
+  .form-forgot-password{
+    color: #0e121e;
+    font-size: 13px;
+    float: right;
+    margin-bottom: 10px;
+  }
+  
+  .form-new-user{
+    float: left;
+    color: #848893;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .amenityBoxes{
+   background-color:#f8f9fa;
+   display: inline-block;
+   margin: 2px 5px 5px 5px;
+   padding: 1% 1% 1% 1%;
+  }
+
+  .amenityCross{
+    position: relative;
+    margin-left: 8px;
+    top: -7px;
+    font-size: 10px;
+    cursor: pointer;
+  }

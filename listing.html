@@ -22,13 +22,8 @@
     <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+    <link rel="stylesheet" href="assets/css/listingForm.css">
 
-TemplateMo 564 Plot Listing
-
-https://templatemo.com/tm-564-plot-listing
-
--->
   </head>
 
 <body>
@@ -62,7 +57,7 @@ https://templatemo.com/tm-564-plot-listing
               <li><a href="category.html">Category</a></li>
               <li><a href="listing.html" class="active">Listing</a></li>
               <li><a href="contact.html">Contact Us</a></li> 
-              <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Listing</a></div></li> 
+              <li onclick=openListingForm()><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Listing</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -767,6 +762,36 @@ https://templatemo.com/tm-564-plot-listing
       </div>
     </div>
   </div>
+  <dialog class="form-popup" id="listingForm" open>
+    <form class="form-container" id="listingForm1">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeListingForm()></i>
+      <h1 class="form-heading">Add  your Listing</h1>
+
+      <label for="name"><b>Full Name<span style="color: red;">&nbsp;*</span></b></label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name" required>
+      
+        <label for="text"><b>Amenities<span style="color: red;">&nbsp;*</span></b></label>
+        <div id="amenityBox"></div>
+        <input type="text" class="form-control" id="amenities" name="password" placeholder="Enter the Amenities"
+          name="password" required multiple>
+      
+      
+        <label for="image"><b>Image<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="file" class="form-control" id="image" name="image" placeholder="Upload Image"
+          name="image" required>
+        
+        <label for="dimensions"><b>Dimensions</b></label>
+        <input type="text" class="form-control" id="dimensions" name="dimensions" placeholder="Enter Dimensions of the place"
+          name="dimensions">  
+
+        <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
+        <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
+            name="price" required>   
+        <input type="button" class="btn cancel" name="submitListing" onclick="closeListingForm()" style="background-color: #2b2d42;" value="Add Listing"/>
+    </form>
+  </dialog>
 
   <footer>
     <div class="container">
@@ -827,6 +852,8 @@ https://templatemo.com/tm-564-plot-listing
     </div>
   </footer>
 
+  
+
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -834,7 +861,44 @@ https://templatemo.com/tm-564-plot-listing
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    function openListingForm() {
+      document.getElementById("listingForm").style.display = "block";
+    }
+    const form = document.getElementById("listingForm1");
+    function closeListingForm(event) {
+      form.submit();
+      document.getElementById("listingForm").style.display = "none";
+      }
+      
+    
+    form.addEventListener("keyup",()=>{
+      if(event.keyCode === 13){
+        event.preventDefault();
+        return false;
+      }
+    })
+    const inputField = document.getElementById("amenities");
 
+    document.addEventListener("click", function(e){
+  const target = e.target.closest("#amenityCross"); // Or any other selector.
+
+  if(target){
+    document.getElementById("amenityCross").parentNode.remove();
+  }
+});
+
+inputField.addEventListener("keyup", () => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        const inputValues = inputField.value.split(",");
+        document.getElementById("amenityBox").innerHTML += "<div class= amenityBoxes>" + inputValues + "<span id=amenityCross class=amenityCross> X </span>"+ "</div>";
+        console.log(inputValues);
+        inputField.value = "";
+    }
+
+});
+  </script>
 </body>
 
 </html>
