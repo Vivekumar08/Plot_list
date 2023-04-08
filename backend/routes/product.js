@@ -37,6 +37,8 @@ productRouter.get("/fileinfo/:filename", (req, res) => {
 productRouter.get("/", async (req, res) => {
     try {
         const result = await ProductModel.find({});
+        const owner = await VendorModel.findById(result.userOwner)
+        // console.log(result)
         res.status(200).json(result);
     } catch (err) {
         res.status(500).json(err);
