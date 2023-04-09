@@ -16,10 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (response.status == 200) {
             const data = await response.json()
             if (data) {
-                console.log(data)
                 const cardContainer = document.getElementById('card-item');
-                data.forEach((elem) => {
-                    // Create a card element
+                for (const user of data) {
+                    const elem = user.result
                     const row = document.createElement('div');
                     row.classList.add('row')
 
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     rightContent.appendChild(anchorright)
 
                     const h6 = document.createElement("h6")
-                    h6.textContent = `By: Sale Agent`
+                    h6.textContent = `By: ${user.name}`
                     rightContent.appendChild(h6)
 
                     const rate = document.createElement('ul');
@@ -80,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     imgIcon1.alt = "../assets/images/listing-icon-01.png"
                     divIcon.appendChild(imgIcon1)
                     price.appendChild(divIcon)
-                    price.textContent=`$${elem.Prize} / month with taxes`
+                    price.textContent = `$${elem.Prize} / month with taxes`
                     rightContent.appendChild(price)
 
                     const li1 = document.createElement("li")
@@ -88,14 +87,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     imgIcon2.src = "../assets/images/listing-icon-02.png"
                     imgIcon2.alt = "../assets/images/listing-icon-02.png"
                     li1.appendChild(imgIcon2)
-                    li1.textContent = `${elem.ingredients.find((ele)=>ele.Bedroom).Bedroom} Bedroom`
+                    li1.textContent = `${elem.ingredients.find((ele) => ele.Bedroom).Bedroom} Bedroom`
 
                     const li2 = document.createElement("li")
                     const imgIcon3 = document.createElement("img")
                     imgIcon3.src = "../assets/images/listing-icon-03.png"
                     imgIcon3.alt = "../assets/images/listing-icon-03.png"
                     li2.appendChild(imgIcon3)
-                    li2.textContent = `${elem.ingredients.find((ele)=>ele.Bathroom).Bathroom} Bathroom`
+                    li2.textContent = `${elem.ingredients.find((ele) => ele.Bathroom).Bathroom} Bathroom`
 
                     const detail = document.createElement("span")
                     detail.classList.add("details")
@@ -113,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const iContact = document.createElement("i")
                     iContact.classList.add("fa", "fa-eye")
                     const anchorContact = document.createElement('a');
-                    anchorContact.href = "../contact.html"
+                    anchorContact.href = `mailto:${user.email}`
                     anchorContact.appendChild(iContact)
                     anchorContact.textContent = "Contact Now"
                     mainMenu.appendChild(anchorContact)
@@ -122,7 +121,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     lisitng.appendChild(rightContent)
 
                     cardContainer.appendChild(row)
-                })
+                    // })
+                }
             }
         }
     }

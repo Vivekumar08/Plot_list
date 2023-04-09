@@ -37,9 +37,12 @@ productRouter.get("/fileinfo/:filename", (req, res) => {
 productRouter.get("/", async (req, res) => {
     try {
         const result = await ProductModel.find({});
-        const owner = await VendorModel.findById(result.userOwner)
-        // console.log(result)
-        res.status(200).json(result);
+        const arr = []
+        for (const user of result) {
+            const owner = await VendorModel.findById(user.userOwner)
+            arr.push({result:user, name: owner.name, email: owner.email })
+        }
+        res.status(200).json([... new Set(arr)]);
     } catch (err) {
         res.status(500).json(err);
     }
