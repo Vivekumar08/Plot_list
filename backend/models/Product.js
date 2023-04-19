@@ -33,6 +33,10 @@ const productSchema = mongoose.Schema({
         type: Number,
         required: true,
     },
+    Category: {
+        type: String,
+        required: true,
+    },
     userOwner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Vendors",

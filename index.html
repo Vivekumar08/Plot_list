@@ -381,11 +381,37 @@
       <input type="text" class="form-control" id="dimensions" name="dimensions"
         placeholder="Enter Dimensions of the place" name="dimensions">
 
-      <label for="price"><b>Price<span style="color: red;">&nbsp;*</span></b></label>
+      <label id="Category"><b>Category</b></label>
+      <br>
+      <div style="display:flex; flex-wrap: wrap;">
+        <div style="display:flex; 	align-items: center; margin: 5px;">
+          <input id="Cars" type="radio" name="category" value="Cars" style="margin: 5px;" />
+          <label for="Cars">Cars</label>
+        </div>
+        <div style="display:flex; 	align-items: center; margin: 2px;">
+          <input id="Apartments" type="radio" name="category" value="Apartments" style="margin: 5px;" />
+          <label for="Apartments">Apartments</label>
+        </div>
+        <div style="display:flex; 	align-items: center; margin: 2px;">
+          <input id="Shopping" type="radio" name="category" value="Shopping" style="margin: 5px;" />
+          <label for="Shopping">Shopping</label>
+        </div>
+        <div style="display:flex; 	align-items: center; margin: 2px;">
+          <input id="Food & Life" type="radio" name="category" value="Food & Life" style="margin: 5px;" />
+          <label for="Food & Life">Food & Life</label>
+        </div>
+        <div style="display:flex; 	align-items: center; margin: 2px;">
+          <input id="Traveling" type="radio" name="category" value="Traveling" style="margin: 5px;" />
+          <label for="Traveling">Food & Life</label>
+        </div>
+      </div>
+      <br>
+
+      <label for="price"><b>Price<span style="color: red; ">&nbsp;*</span></b></label>
       <input type="number" class="form-control" id="price" name="price" placeholder="Enter average price of the place"
         name="price" required>
       <input type="submit" class="btn cancel" name="submit" onclick="closeListingForm()"
-        style="background-color: #2b2d42;" value="Add Listing" />
+        style="background-color: #2b2d42; margin: 5px;" value="Add Listing" />
     </form>
   </dialog>
 
@@ -397,7 +423,9 @@
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="Plot Listing">
             </div>
-            <p>Platform that provides a comprehensive list of options for users to explore and choose from.... serves as a convenient one-stop-shop for users to find and explore various options for dining, lodging, and shopping.</p>
+            <p>Platform that provides a comprehensive list of options for users to explore and choose from.... serves as
+              a convenient one-stop-shop for users to find and explore various options for dining, lodging, and
+              shopping.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -449,6 +477,7 @@
 
 
   <script src="./JS/script.js"></script>
+  <script src="./JS/home.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>

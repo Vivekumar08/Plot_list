@@ -40,7 +40,7 @@ productRouter.get("/", async (req, res) => {
         const arr = []
         for (const user of result) {
             const owner = await VendorModel.findById(user.userOwner)
-            arr.push({result:user, name: owner.name, email: owner.email })
+            arr.push({ result: user, name: owner.name, email: owner.email })
         }
         res.status(200).json([... new Set(arr)]);
     } catch (err) {
@@ -53,9 +53,8 @@ productRouter.post("/products",
     verifyToken,
     upload.single('file'),
     async (req, res) => {
-        const { fullName, Bedroom, Bathroom, dimension, Prize } = req.body
+        const { fullName, Bedroom, Bathroom, dimension, Prize, Category } = req.body
         const { filename } = req.file
-        console.log(filename)
         const user = await VendorModel.findById(req.user)
         const recipe = new ProductModel({
             _id: new mongoose.Types.ObjectId(),
@@ -67,9 +66,8 @@ productRouter.post("/products",
             dimension: dimension,
             Prize,
             userOwner: user,
+            Category: Category,
         });
-        console.log(recipe);
-
         try {
             const result = await recipe.save();
             res.status(201).json({
@@ -80,11 +78,14 @@ productRouter.post("/products",
                     Distance: result.Distance,
                     Prize: result.Prize,
                     Reviews: result.Reviews,
+                    Category: result.Category,
                     _id: result._id,
                 },
             });
         } catch (err) {
             res.status(500).json(err);
+            deleteFile(filename)
+
         }
     });
 
