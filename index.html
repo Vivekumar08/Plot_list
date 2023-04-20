@@ -416,6 +416,31 @@
     </form>
   </dialog>
 
+  <!-- ====== Contact Form ====== -->
+  <dialog class="" id="contactForm" open>
+    <form class="form-container" id="contactForm">
+      <i class="far fa fa-times"
+        style="position: relative; font-size:25px; font-style: normal;color:#2b2d42;margin-left:97%; top:-11px; cursor: pointer;"
+        onclick=closeBoth()></i>
+      <h1 class="form-heading">Interested? Contact Owner</h1>
+
+      <label for="email"><b>Enter Your Query</b></label>
+      <input type="text" class="form-control" id="text" placeholder="Message Owner" name="text" style="height:200px; width:380px">
+      <input type="submit" class="btn cancel" name="submit" onclick="closeForm()" style="background-color: #2b2d42;"
+        value="Send">
+      <div class="form-line1"></div>
+      <h5 class="form-or-text">or</h5>
+      <div class="form-line2"></div>
+      <div>
+        <button type="submit" class="btn btn2" style="background-color: #0f9d58; float: left;"><i
+            class="fas fa-phone-alt" style="position: relative; margin-right: 10px;"></i>Call</button>
+        <button type="submit" class="btn btn2" style="background-color:#0073b1; float: right;"><i
+            class="fas fa-envelope"
+            style="position: relative; margin-right: 10px; font-size: 18px;"></i>Email</button>
+      </div>
+    </form>
+  </dialog>
+
   <footer>
     <div class="container">
       <div class="row">
