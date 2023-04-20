@@ -9,12 +9,13 @@ const { generateRandomToken } = require("../utils/basicFunction..js");
 
 const clientRouter = express.Router();
 
-clientRouter.post("/clientInfo", async (req, res) => {
+clientRouter.post("/clientInfo/:productid", async (req, res) => {
     try {
-        const { Name, email, message, productId } = req.body;
+        const { Name, email, message } = req.body;
+        const productId = req.params.productid
         const product = await ProductModel.findById(productId)
         const token = generateRandomToken()
-        const vendor = await VendorModel.findOneAndUpdate(
+        await VendorModel.findOneAndUpdate(
             { _id: product.userOwner },
             {
                 $push: {
@@ -24,8 +25,9 @@ clientRouter.post("/clientInfo", async (req, res) => {
                 }
             }
         )
-        res.status(200).json({ msg: "Successfully Contacted", token: token })
+        res.status(200).json({ msg: "Successfully Message Sent", token: token })
     } catch (error) {
+        console.log(error)
         res.status(500).json({ err: error })
     }
 })
