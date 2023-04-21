@@ -42,4 +42,18 @@ clientRouter.get("/clientInfo", verifyToken, async (req, res) => {
     }
 })
 
+clientRouter.get("/productdetails/:id", verifyToken, async (req, res) => {
+    try {
+        const user = await VendorModel.findById(req.user)
+        if (user) {
+            const product = await ProductModel.findById(req.params.id)
+            console.log(product)
+            res.status(200).json(product)
+        }
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ err: error })
+    }
+})
+
 module.exports = clientRouter;

@@ -58,11 +58,13 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="listing.html" class="active">Listing</a></li>
               <li><a href="contact.html">Contact Us</a></li>
-              <li>
+              <li style="display: flex; gap: 15px;">
                 <div class="main-white-button" id="loginFormOpen" onclick=openForm()><a> Login</a></div>
                 <div onclick=openListingForm() style="display: none;" id="listform" class="main-white-button"><a
                     href="#"><i class="fa fa-plus"></i> Add Your
                     Listing</a></div>
+                <div onclick='logoutVendor()' style="display: none;" id="logout" class="main-white-button"><a
+                    href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -106,6 +108,17 @@
       <div class="row">
         <div class="col-12">
           <div id="ProfileCont" class="item" style="display: flex; gap: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recent-listing">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div id="itemCard"
+            style="width: 80%; margin-left: auto; margin-right: auto; display: flex; overflow-x: auto; gap: 25px;"
+            class="item"></div>
         </div>
       </div>
     </div>

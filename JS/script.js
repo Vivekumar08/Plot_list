@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const button1 = document.getElementById("loginFormOpen");
     const button2 = document.getElementById("listform");
+    const button3 = document.getElementById("logout");
     const cookies = document.cookie.split(";");
     const myCookie = cookies.find(cookie => cookie.trim().startsWith("token="));
     const myCookieValue = myCookie ? myCookie.trim().substring("token=".length) : null;
@@ -8,11 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (authToken) {
         button1.style.display = "none";
         button2.style.display = "block";
+        button3.style.display = "block";
     }
 });
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
+}
+function logoutVendor() {
+    document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    window.location.reload();
 }
 
 async function closeForm() {
@@ -32,10 +38,13 @@ async function closeForm() {
                 }
             });
             const data = await response.json();
-            alert('You have login successfully');
-            document.cookie = `token=${data.token}`;
-            const authToken = document.cookie
-            console.log(authToken)
+            if (response.status === 200) {
+                alert('You have login successfully');
+                document.cookie = `token=${data.token}`;
+                const authToken = document.cookie
+            } else {
+                alert(`${data.message}`);
+            }
             if (authToken) {
                 button1.style.display = "none";
                 button2.style.display = "block";
@@ -65,7 +74,6 @@ async function closeSignUpForm() {
             const name = await document.getElementById("name").value;
             const email = await document.getElementById("email1").value;
             const password = await document.getElementById("password1").value;
-            console.log(name, email, password)
             const response = await fetch(`http://localhost:6600/auth/register`, {
                 method: "POST",
                 body: JSON.stringify({ name, email, password }),
@@ -74,8 +82,11 @@ async function closeSignUpForm() {
                 }
             });
             const data = await response.json();
-            alert('You have registered successfully');
-            console.log(data)
+            if (response.status === 200) {
+                alert('You have registered successfully');
+            } else {
+                alert(`${data.message}`);
+            }
         }
         form.addEventListener("submit", (event) => {
             event.preventDefault();

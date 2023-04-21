@@ -62,11 +62,13 @@ https://templatemo.com/tm-564-plot-listing
               <li><a href="index.html">Home</a></li>
               <li><a href="listing.html">Listing</a></li>
               <li><a href="contact.html" class="active">Contact Us</a></li>
-              <li>
+              <li style="display: flex; gap: 15px;">
                 <div class="main-white-button" id="loginFormOpen" onclick=openForm()><a> Login</a></div>
                 <div onclick=openListingForm() style="display: none;" id="listform" class="main-white-button"><a
                     href="#"><i class="fa fa-plus"></i> Add Your
                     Listing</a></div>
+                <div onclick='logoutVendor()' style="display: none;" id="logout" class="main-white-button"><a
+                    href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>

@@ -226,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (response.status === 200) {
             window.alert(`${data.msg}\nYour token is: ${data.token}`)
             document.getElementById("contactDialog").close();
+            window.location.reload();
         } else {
             console.log(data.err)
         }

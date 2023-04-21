@@ -15,7 +15,7 @@ userRouter.post("/register", async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new VendorModel({ name, email, password: hashedPassword });
         await newUser.save();
-        res.json({ message: "User registered successfully" });
+        res.status(200).json({ message: "User registered successfully" });
     } catch (err) {
         console.log(err)
     }
@@ -38,7 +38,7 @@ userRouter.post("/login", async (req, res) => {
             .json({ message: "Username or password is incorrect" });
     }
     const token = jwt.sign({ id: user._id }, "secret");
-    res.json({ token, userID: user._id });
+    res.status(200).json({ token, userID: user._id });
 });
 
 module.exports = userRouter;
